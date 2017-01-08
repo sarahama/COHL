@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		480CFAF41E21BECD00B6592C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFAF31E21BECD00B6592C /* AppDelegate.swift */; };
+		480CFAF61E21BECD00B6592C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFAF51E21BECD00B6592C /* ViewController.swift */; };
+		480CFAF91E21BECD00B6592C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 480CFAF71E21BECD00B6592C /* Main.storyboard */; };
+		480CFAFC1E21BECD00B6592C /* moveMingo3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 480CFAFA1E21BECD00B6592C /* moveMingo3.xcdatamodeld */; };
+		480CFAFE1E21BECD00B6592C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 480CFAFD1E21BECD00B6592C /* Assets.xcassets */; };
+		480CFB011E21BECD00B6592C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 480CFAFF1E21BECD00B6592C /* LaunchScreen.storyboard */; };
+		480CFB0C1E21BECE00B6592C /* moveMingo3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB0B1E21BECE00B6592C /* moveMingo3Tests.swift */; };
+		480CFB171E21BECE00B6592C /* moveMingo3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB161E21BECE00B6592C /* moveMingo3UITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		480CFB081E21BECE00B6592C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 480CFAE81E21BECD00B6592C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 480CFAEF1E21BECD00B6592C;
+			remoteInfo = moveMingo3;
+		};
+		480CFB131E21BECE00B6592C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 480CFAE81E21BECD00B6592C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 480CFAEF1E21BECD00B6592C;
+			remoteInfo = moveMingo3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		480CFAF01E21BECD00B6592C /* moveMingo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moveMingo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		480CFAF31E21BECD00B6592C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		480CFAF51E21BECD00B6592C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		480CFAF81E21BECD00B6592C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		480CFAFB1E21BECD00B6592C /* moveMingo3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = moveMingo3.xcdatamodel; sourceTree = "<group>"; };
+		480CFAFD1E21BECD00B6592C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		480CFB001E21BECD00B6592C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		480CFB021E21BECD00B6592C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		480CFB071E21BECE00B6592C /* moveMingo3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moveMingo3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		480CFB0B1E21BECE00B6592C /* moveMingo3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveMingo3Tests.swift; sourceTree = "<group>"; };
+		480CFB0D1E21BECE00B6592C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		480CFB121E21BECE00B6592C /* moveMingo3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moveMingo3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		480CFB161E21BECE00B6592C /* moveMingo3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moveMingo3UITests.swift; sourceTree = "<group>"; };
+		480CFB181E21BECE00B6592C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		480CFAED1E21BECD00B6592C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480CFB041E21BECE00B6592C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480CFB0F1E21BECE00B6592C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		480CFAE71E21BECC00B6592C = {
+			isa = PBXGroup;
+			children = (
+				480CFAF21E21BECD00B6592C /* moveMingo3 */,
+				480CFB0A1E21BECE00B6592C /* moveMingo3Tests */,
+				480CFB151E21BECE00B6592C /* moveMingo3UITests */,
+				480CFAF11E21BECD00B6592C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		480CFAF11E21BECD00B6592C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				480CFAF01E21BECD00B6592C /* moveMingo3.app */,
+				480CFB071E21BECE00B6592C /* moveMingo3Tests.xctest */,
+				480CFB121E21BECE00B6592C /* moveMingo3UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		480CFAF21E21BECD00B6592C /* moveMingo3 */ = {
+			isa = PBXGroup;
+			children = (
+				480CFAF31E21BECD00B6592C /* AppDelegate.swift */,
+				480CFAF51E21BECD00B6592C /* ViewController.swift */,
+				480CFAF71E21BECD00B6592C /* Main.storyboard */,
+				480CFAFD1E21BECD00B6592C /* Assets.xcassets */,
+				480CFAFF1E21BECD00B6592C /* LaunchScreen.storyboard */,
+				480CFB021E21BECD00B6592C /* Info.plist */,
+				480CFAFA1E21BECD00B6592C /* moveMingo3.xcdatamodeld */,
+			);
+			path = moveMingo3;
+			sourceTree = "<group>";
+		};
+		480CFB0A1E21BECE00B6592C /* moveMingo3Tests */ = {
+			isa = PBXGroup;
+			children = (
+				480CFB0B1E21BECE00B6592C /* moveMingo3Tests.swift */,
+				480CFB0D1E21BECE00B6592C /* Info.plist */,
+			);
+			path = moveMingo3Tests;
+			sourceTree = "<group>";
+		};
+		480CFB151E21BECE00B6592C /* moveMingo3UITests */ = {
+			isa = PBXGroup;
+			children = (
+				480CFB161E21BECE00B6592C /* moveMingo3UITests.swift */,
+				480CFB181E21BECE00B6592C /* Info.plist */,
+			);
+			path = moveMingo3UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		480CFAEF1E21BECD00B6592C /* moveMingo3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 480CFB1B1E21BECE00B6592C /* Build configuration list for PBXNativeTarget "moveMingo3" */;
+			buildPhases = (
+				480CFAEC1E21BECD00B6592C /* Sources */,
+				480CFAED1E21BECD00B6592C /* Frameworks */,
+				480CFAEE1E21BECD00B6592C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = moveMingo3;
+			productName = moveMingo3;
+			productReference = 480CFAF01E21BECD00B6592C /* moveMingo3.app */;
+			productType = "com.apple.product-type.application";
+		};
+		480CFB061E21BECE00B6592C /* moveMingo3Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 480CFB1E1E21BECE00B6592C /* Build configuration list for PBXNativeTarget "moveMingo3Tests" */;
+			buildPhases = (
+				480CFB031E21BECE00B6592C /* Sources */,
+				480CFB041E21BECE00B6592C /* Frameworks */,
+				480CFB051E21BECE00B6592C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				480CFB091E21BECE00B6592C /* PBXTargetDependency */,
+			);
+			name = moveMingo3Tests;
+			productName = moveMingo3Tests;
+			productReference = 480CFB071E21BECE00B6592C /* moveMingo3Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		480CFB111E21BECE00B6592C /* moveMingo3UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 480CFB211E21BECE00B6592C /* Build configuration list for PBXNativeTarget "moveMingo3UITests" */;
+			buildPhases = (
+				480CFB0E1E21BECE00B6592C /* Sources */,
+				480CFB0F1E21BECE00B6592C /* Frameworks */,
+				480CFB101E21BECE00B6592C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				480CFB141E21BECE00B6592C /* PBXTargetDependency */,
+			);
+			name = moveMingo3UITests;
+			productName = moveMingo3UITests;
+			productReference = 480CFB121E21BECE00B6592C /* moveMingo3UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		480CFAE81E21BECD00B6592C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Sarah MacAdam";
+				TargetAttributes = {
+					480CFAEF1E21BECD00B6592C = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = MYCEW9NT4J;
+					};
+					480CFB061E21BECE00B6592C = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = MYCEW9NT4J;
+						TestTargetID = 480CFAEF1E21BECD00B6592C;
+					};
+					480CFB111E21BECE00B6592C = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = MYCEW9NT4J;
+						TestTargetID = 480CFAEF1E21BECD00B6592C;
+					};
+				};
+			};
+			buildConfigurationList = 480CFAEB1E21BECD00B6592C /* Build configuration list for PBXProject "moveMingo3" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 480CFAE71E21BECC00B6592C;
+			productRefGroup = 480CFAF11E21BECD00B6592C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				480CFAEF1E21BECD00B6592C /* moveMingo3 */,
+				480CFB061E21BECE00B6592C /* moveMingo3Tests */,
+				480CFB111E21BECE00B6592C /* moveMingo3UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		480CFAEE1E21BECD00B6592C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480CFB011E21BECD00B6592C /* LaunchScreen.storyboard in Resources */,
+				480CFAFE1E21BECD00B6592C /* Assets.xcassets in Resources */,
+				480CFAF91E21BECD00B6592C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480CFB051E21BECE00B6592C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480CFB101E21BECE00B6592C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		480CFAEC1E21BECD00B6592C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480CFAF61E21BECD00B6592C /* ViewController.swift in Sources */,
+				480CFAF41E21BECD00B6592C /* AppDelegate.swift in Sources */,
+				480CFAFC1E21BECD00B6592C /* moveMingo3.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480CFB031E21BECE00B6592C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480CFB0C1E21BECE00B6592C /* moveMingo3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		480CFB0E1E21BECE00B6592C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				480CFB171E21BECE00B6592C /* moveMingo3UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		480CFB091E21BECE00B6592C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 480CFAEF1E21BECD00B6592C /* moveMingo3 */;
+			targetProxy = 480CFB081E21BECE00B6592C /* PBXContainerItemProxy */;
+		};
+		480CFB141E21BECE00B6592C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 480CFAEF1E21BECD00B6592C /* moveMingo3 */;
+			targetProxy = 480CFB131E21BECE00B6592C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		480CFAF71E21BECD00B6592C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				480CFAF81E21BECD00B6592C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		480CFAFF1E21BECD00B6592C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				480CFB001E21BECD00B6592C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		480CFB191E21BECE00B6592C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		480CFB1A1E21BECE00B6592C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		480CFB1C1E21BECE00B6592C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = moveMingo3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		480CFB1D1E21BECE00B6592C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = moveMingo3/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		480CFB1F1E21BECE00B6592C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = moveMingo3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moveMingo3.app/moveMingo3";
+			};
+			name = Debug;
+		};
+		480CFB201E21BECE00B6592C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = moveMingo3Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moveMingo3.app/moveMingo3";
+			};
+			name = Release;
+		};
+		480CFB221E21BECE00B6592C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = moveMingo3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = moveMingo3;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		480CFB231E21BECE00B6592C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = moveMingo3UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = moveMingo3;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		480CFAEB1E21BECD00B6592C /* Build configuration list for PBXProject "moveMingo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				480CFB191E21BECE00B6592C /* Debug */,
+				480CFB1A1E21BECE00B6592C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		480CFB1B1E21BECE00B6592C /* Build configuration list for PBXNativeTarget "moveMingo3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				480CFB1C1E21BECE00B6592C /* Debug */,
+				480CFB1D1E21BECE00B6592C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		480CFB1E1E21BECE00B6592C /* Build configuration list for PBXNativeTarget "moveMingo3Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				480CFB1F1E21BECE00B6592C /* Debug */,
+				480CFB201E21BECE00B6592C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		480CFB211E21BECE00B6592C /* Build configuration list for PBXNativeTarget "moveMingo3UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				480CFB221E21BECE00B6592C /* Debug */,
+				480CFB231E21BECE00B6592C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		480CFAFA1E21BECD00B6592C /* moveMingo3.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				480CFAFB1E21BECD00B6592C /* moveMingo3.xcdatamodel */,
+			);
+			currentVersion = 480CFAFB1E21BECD00B6592C /* moveMingo3.xcdatamodel */;
+			path = moveMingo3.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 480CFAE81E21BECD00B6592C /* Project object */;
+}
