@@ -8,28 +8,57 @@
 
 import UIKit
 
-class EventsViewController: UIViewController {
+class EventsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CalendarModelProtocal {
 
+    //Properties
+    
+    var feedItems: NSArray = NSArray()
+    var selectedLocation : EventModel = EventModel()
+    @IBOutlet weak var eventListTableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        //set delegates and initialize homeModel
+        
+        self.eventListTableView.delegate = self
+        self.eventListTableView.dataSource = self
+        
+        let calendarModel = CalendarModel()
+        calendarModel.delegate = self
+        calendarModel.downloadItems()
+        
     }
-
+    
+    func itemsDownloaded(items: NSArray) {
+        
+        feedItems = items
+        self.eventListTableView.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Return the number of feed items
+        return feedItems.count
+        
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        // Retrieve cell
+        let cellIdentifier: String = "BasicCell"
+        let myCell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
+        // Get the event to be shown
+        let item: EventModel = feedItems[indexPath.row] as! EventModel
+        // Get references to labels of cell
+        myCell.textLabel!.text = item.name
+        
+        return myCell
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
