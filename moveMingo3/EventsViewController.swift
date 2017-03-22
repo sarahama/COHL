@@ -46,11 +46,13 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
-        let myCell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier)!
+        let myCell: EventTableCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! EventTableCell
         // Get the event to be shown
         let item: EventModel = feedItems[indexPath.row] as! EventModel
-        // Get references to labels of cell
-        myCell.textLabel!.text = item.name
+        // Set the title, address, and time for each cell
+        myCell.eventTitle!.setTitle(item.name, forState: UIControlState())
+        myCell.address!.text = item.address
+        myCell.date!.text = item.start_date
         
         return myCell
     }
