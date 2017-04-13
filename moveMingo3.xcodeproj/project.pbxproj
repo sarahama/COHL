@@ -31,6 +31,9 @@
 		4865E9A61E8210AF00E5DF75 /* EventTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */; };
 		48FDE2161E497C2D0088BA9E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */; };
 		48FDE2181E4A2F0B0088BA9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */; };
+		7BBEF5D60AF94A0E7C463453 /* Pods_moveMingo3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3FF32845C98FFE80635325 /* Pods_moveMingo3Tests.framework */; };
+		9B0CB9135124F99B5325F92E /* Pods_moveMingo3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A9ECD3E6669CFF6159E07FE /* Pods_moveMingo3.framework */; };
+		BBBF6E644C41400986F0D95C /* Pods_moveMingo3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7AC56C7F2640B89BA6E979 /* Pods_moveMingo3UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		038ED7978677FDAC657D58EB /* Pods-moveMingo3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moveMingo3.release.xcconfig"; path = "Pods/Target Support Files/Pods-moveMingo3/Pods-moveMingo3.release.xcconfig"; sourceTree = "<group>"; };
+		2C3FF32845C98FFE80635325 /* Pods_moveMingo3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moveMingo3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FFA3026D747613B62AC381D /* Pods-moveMingo3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moveMingo3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moveMingo3UITests/Pods-moveMingo3UITests.release.xcconfig"; sourceTree = "<group>"; };
+		3A9ECD3E6669CFF6159E07FE /* Pods_moveMingo3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moveMingo3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		480CFAF01E21BECD00B6592C /* moveMingo3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moveMingo3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		480CFAF31E21BECD00B6592C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		480CFAF51E21BECD00B6592C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +88,11 @@
 		4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableCell.swift; sourceTree = "<group>"; };
 		48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		939D80C92DDD900293F10E3B /* Pods-moveMingo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moveMingo3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moveMingo3/Pods-moveMingo3.debug.xcconfig"; sourceTree = "<group>"; };
+		AF96E78C0AE505DF5CE1B155 /* Pods-moveMingo3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moveMingo3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moveMingo3Tests/Pods-moveMingo3Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B0709FD7D9935249A9EC2A15 /* Pods-moveMingo3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moveMingo3UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moveMingo3UITests/Pods-moveMingo3UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB7AC56C7F2640B89BA6E979 /* Pods_moveMingo3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moveMingo3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2299ED6111C3AB91F51362 /* Pods-moveMingo3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moveMingo3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moveMingo3Tests/Pods-moveMingo3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B0CB9135124F99B5325F92E /* Pods_moveMingo3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBEF5D60AF94A0E7C463453 /* Pods_moveMingo3Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBF6E644C41400986F0D95C /* Pods_moveMingo3UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +130,8 @@
 				480CFB0A1E21BECE00B6592C /* moveMingo3Tests */,
 				480CFB151E21BECE00B6592C /* moveMingo3UITests */,
 				480CFAF11E21BECD00B6592C /* Products */,
+				4BD2A4BBD6EC583679EEB2DF /* Pods */,
+				843BABDBF448F27D22EFA53D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +201,29 @@
 			name = "Core Data";
 			sourceTree = "<group>";
 		};
+		4BD2A4BBD6EC583679EEB2DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				939D80C92DDD900293F10E3B /* Pods-moveMingo3.debug.xcconfig */,
+				038ED7978677FDAC657D58EB /* Pods-moveMingo3.release.xcconfig */,
+				ED2299ED6111C3AB91F51362 /* Pods-moveMingo3Tests.debug.xcconfig */,
+				AF96E78C0AE505DF5CE1B155 /* Pods-moveMingo3Tests.release.xcconfig */,
+				B0709FD7D9935249A9EC2A15 /* Pods-moveMingo3UITests.debug.xcconfig */,
+				2FFA3026D747613B62AC381D /* Pods-moveMingo3UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		843BABDBF448F27D22EFA53D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A9ECD3E6669CFF6159E07FE /* Pods_moveMingo3.framework */,
+				2C3FF32845C98FFE80635325 /* Pods_moveMingo3Tests.framework */,
+				CB7AC56C7F2640B89BA6E979 /* Pods_moveMingo3UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 480CFB1B1E21BECE00B6592C /* Build configuration list for PBXNativeTarget "moveMingo3" */;
 			buildPhases = (
+				FA2FCA7BCD6630869C98996C /* [CP] Check Pods Manifest.lock */,
 				480CFAEC1E21BECD00B6592C /* Sources */,
 				480CFAED1E21BECD00B6592C /* Frameworks */,
 				480CFAEE1E21BECD00B6592C /* Resources */,
+				E500C4D2E2F2194959A2B3BA /* [CP] Embed Pods Frameworks */,
+				3295C92BC71570F59206E40D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 480CFB1E1E21BECE00B6592C /* Build configuration list for PBXNativeTarget "moveMingo3Tests" */;
 			buildPhases = (
+				42D14C3DE9B63DE3F7505608 /* [CP] Check Pods Manifest.lock */,
 				480CFB031E21BECE00B6592C /* Sources */,
 				480CFB041E21BECE00B6592C /* Frameworks */,
 				480CFB051E21BECE00B6592C /* Resources */,
+				C1263BAB982045F16D5ED39D /* [CP] Embed Pods Frameworks */,
+				27A615AEFDF675A95D04F533 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,9 +272,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 480CFB211E21BECE00B6592C /* Build configuration list for PBXNativeTarget "moveMingo3UITests" */;
 			buildPhases = (
+				5C441874BE30257007B9FEFD /* [CP] Check Pods Manifest.lock */,
 				480CFB0E1E21BECE00B6592C /* Sources */,
 				480CFB0F1E21BECE00B6592C /* Frameworks */,
 				480CFB101E21BECE00B6592C /* Resources */,
+				9549D8D7305EC918FB99C50D /* [CP] Embed Pods Frameworks */,
+				F291870CE80DA46BDBD973D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,15 +302,18 @@
 					480CFAEF1E21BECD00B6592C = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = MYCEW9NT4J;
+						LastSwiftMigration = 0830;
 					};
 					480CFB061E21BECE00B6592C = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = MYCEW9NT4J;
+						LastSwiftMigration = 0830;
 						TestTargetID = 480CFAEF1E21BECD00B6592C;
 					};
 					480CFB111E21BECE00B6592C = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = MYCEW9NT4J;
+						LastSwiftMigration = 0830;
 						TestTargetID = 480CFAEF1E21BECD00B6592C;
 					};
 				};
@@ -312,6 +364,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27A615AEFDF675A95D04F533 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moveMingo3Tests/Pods-moveMingo3Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3295C92BC71570F59206E40D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moveMingo3/Pods-moveMingo3-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42D14C3DE9B63DE3F7505608 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C441874BE30257007B9FEFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9549D8D7305EC918FB99C50D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moveMingo3UITests/Pods-moveMingo3UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1263BAB982045F16D5ED39D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moveMingo3Tests/Pods-moveMingo3Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E500C4D2E2F2194959A2B3BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moveMingo3/Pods-moveMingo3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F291870CE80DA46BDBD973D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moveMingo3UITests/Pods-moveMingo3UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA2FCA7BCD6630869C98996C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		480CFAEC1E21BECD00B6592C /* Sources */ = {
@@ -476,61 +666,73 @@
 		};
 		480CFB1C1E21BECE00B6592C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 939D80C92DDD900293F10E3B /* Pods-moveMingo3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = MYCEW9NT4J;
 				INFOPLIST_FILE = moveMingo3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		480CFB1D1E21BECE00B6592C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 038ED7978677FDAC657D58EB /* Pods-moveMingo3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = MYCEW9NT4J;
 				INFOPLIST_FILE = moveMingo3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		480CFB1F1E21BECE00B6592C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED2299ED6111C3AB91F51362 /* Pods-moveMingo3Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = moveMingo3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moveMingo3.app/moveMingo3";
 			};
 			name = Debug;
 		};
 		480CFB201E21BECE00B6592C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF96E78C0AE505DF5CE1B155 /* Pods-moveMingo3Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = moveMingo3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/moveMingo3.app/moveMingo3";
 			};
 			name = Release;
 		};
 		480CFB221E21BECE00B6592C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0709FD7D9935249A9EC2A15 /* Pods-moveMingo3UITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = moveMingo3UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = moveMingo3;
 				USES_XCTRUNNER = YES;
 			};
@@ -538,11 +740,13 @@
 		};
 		480CFB231E21BECE00B6592C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FFA3026D747613B62AC381D /* Pods-moveMingo3UITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = moveMingo3UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3UITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = moveMingo3;
 				USES_XCTRUNNER = YES;
 			};

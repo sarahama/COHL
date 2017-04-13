@@ -9,40 +9,42 @@
 import Foundation
 
 protocol CalendarModelProtocal: class {
-    func itemsDownloaded(items: NSArray)
+    func itemsDownloaded(_ items: NSArray)
 }
 
-class CalendarModel: NSObject, NSURLSessionDataDelegate{
+class CalendarModel: NSObject, URLSessionDataDelegate{
 
     //properties
     
     weak var delegate: CalendarModelProtocal!
     
     var data : NSMutableData = NSMutableData()
+
+    //this will be changed to the path on WH&W's server
+    let urlPath: String = "http://localhost/cohl_service.php"
     
-    let urlPath: String = "http://localhost/cohl_service.php" //this will be changed to the path on WH&W's server
-    
+
     func downloadItems() {
         
-        let url: NSURL = NSURL(string: urlPath)!
-        var session: NSURLSession!
-        let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let url: URL = URL(string: urlPath)!
+        var session: Foundation.URLSession!
+        let configuration = URLSessionConfiguration.default
         
         
-        session = NSURLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+        session = Foundation.URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
         
-        let task = session.dataTaskWithURL(url)
+        let task = session.dataTask(with: url)
         
         task.resume()
         
     }
-    
-    func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData) {
-        self.data.appendData(data);
+
+    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        self.data.append(data);
         
     }
     
-    func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         if error != nil {
             print("Failed to download data")
         }else {
@@ -57,7 +59,8 @@ class CalendarModel: NSObject, NSURLSessionDataDelegate{
         var jsonResult: NSMutableArray = NSMutableArray()
         
         do{
-            jsonResult = try NSJSONSerialization.JSONObjectWithData(self.data, options:NSJSONReadingOptions.AllowFragments) as! NSMutableArray
+//                        jsonResult = try JSONSerialization.jsonObject(with: self.data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSMutableArray
+            jsonResult = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSMutableArray
             
         } catch let error as NSError {
             print(error)
@@ -67,7 +70,7 @@ class CalendarModel: NSObject, NSURLSessionDataDelegate{
         var jsonElement: NSDictionary = NSDictionary()
         let events: NSMutableArray = NSMutableArray()
         
-        for(var i = 0; i < jsonResult.count; i++)
+        for i in 1...jsonResult.count
         {
             
             jsonElement = jsonResult[i] as! NSDictionary
@@ -88,14 +91,14 @@ class CalendarModel: NSObject, NSURLSessionDataDelegate{
                 
             }
             
-            events.addObject(event)
-            
+            events.add(event)
+   
         }
         
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        DispatchQueue.main.async(execute: { () -> Void in
             
             self.delegate.itemsDownloaded(events)
             
         })
-    }
+   }
 }

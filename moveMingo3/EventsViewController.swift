@@ -31,26 +31,26 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
-    func itemsDownloaded(items: NSArray) {
+    func itemsDownloaded(_ items: NSArray) {
         
         feedItems = items
         self.eventListTableView.reloadData()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of feed items
         return feedItems.count
         
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Retrieve cell
         let cellIdentifier: String = "BasicCell"
-        let myCell: EventTableCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! EventTableCell
+        let myCell: EventTableCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! EventTableCell
         // Get the event to be shown
         let item: EventModel = feedItems[indexPath.row] as! EventModel
         // Set the title, address, and time for each cell
-        myCell.eventTitle!.setTitle(item.name, forState: UIControlState())
+        myCell.eventTitle!.setTitle(item.name, for: UIControlState())
         myCell.address!.text = item.address
         myCell.date!.text = item.start_date
         

@@ -1,0 +1,6 @@
+framework module Pods_moveMingo3 {
+  umbrella header "Pods-moveMingo3-umbrella.h"
+
+  export *
+  module * { export * }
+}

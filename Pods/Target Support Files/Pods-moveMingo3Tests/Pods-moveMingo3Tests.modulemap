@@ -1,0 +1,6 @@
+framework module Pods_moveMingo3Tests {
+  umbrella header "Pods-moveMingo3Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

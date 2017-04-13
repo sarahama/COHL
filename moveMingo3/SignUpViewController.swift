@@ -24,7 +24,7 @@ class SignUpViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func signUpUser(sender: UIButton) {
+    @IBAction func signUpUser(_ sender: UIButton) {
         print("sign up")
     }
     

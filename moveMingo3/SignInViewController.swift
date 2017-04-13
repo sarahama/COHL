@@ -6,6 +6,7 @@
 //  Copyright © 2017 Sarah MacAdam. All rights reserved.
 //
 import UIKit
+import FacebookLogin
 
 class SignInViewController: UIViewController {
     
@@ -22,7 +23,7 @@ class SignInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loginUser(sender: UIButton) {
+    @IBAction func loginUser(_ sender: UIButton) {
         print("logged in")
     }
     
