@@ -86,6 +86,7 @@
 		4865E9A11E80D94700E5DF75 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		4865E9A31E80DCE200E5DF75 /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableCell.swift; sourceTree = "<group>"; };
+		48A768971EA56CC300AAA94D /* moveMingo3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = moveMingo3.entitlements; sourceTree = "<group>"; };
 		48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		939D80C92DDD900293F10E3B /* Pods-moveMingo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moveMingo3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moveMingo3/Pods-moveMingo3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +149,7 @@
 		480CFAF21E21BECD00B6592C /* moveMingo3 */ = {
 			isa = PBXGroup;
 			children = (
+				48A768971EA56CC300AAA94D /* moveMingo3.entitlements */,
 				480CFB3E1E2DC66700B6592C /* Core Data */,
 				480CFAF31E21BECD00B6592C /* AppDelegate.swift */,
 				480CFAF71E21BECD00B6592C /* Main.storyboard */,
@@ -303,6 +305,11 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = MYCEW9NT4J;
 						LastSwiftMigration = 0830;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					480CFB061E21BECE00B6592C = {
 						CreatedOnToolsVersion = 7.2;
@@ -669,6 +676,7 @@
 			baseConfigurationReference = 939D80C92DDD900293F10E3B /* Pods-moveMingo3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = moveMingo3/moveMingo3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = MYCEW9NT4J;
 				INFOPLIST_FILE = moveMingo3/Info.plist;
@@ -685,6 +693,7 @@
 			baseConfigurationReference = 038ED7978677FDAC657D58EB /* Pods-moveMingo3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = moveMingo3/moveMingo3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = MYCEW9NT4J;
 				INFOPLIST_FILE = moveMingo3/Info.plist;
