@@ -1,4 +1,4 @@
-//
+///Users/sarahmacadam/Documents/Apple development/moveMingo3/moveMingo3
 //  SignInViewController.swift
 //  moveMingo3
 //
@@ -7,8 +7,7 @@
 //
 
 import UIKit
-//import FacebookCore
-//import FacebookLogin
+
 import FBSDKLoginKit
 
 class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
@@ -21,11 +20,12 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
         let loginButton = FBSDKLoginButton()
-        //let loginButton = LoginButton(readPermissions: [ .publicProfile, .email, .userFriends ])
+     
         loginButton.center = view.center
         
         view.addSubview(loginButton)
         loginButton.delegate = self
+        loginButton.readPermissions = ["email", "public_profile"]
     }
     
     func loginButtonDidLogOut (_ loginButton:FBSDKLoginButton!) {
@@ -39,6 +39,30 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
         
         print("logged in with facebook successfully...")
+        
+        print(FBSDKAccessToken.current())
+        
+        // check if the user already exists
+        // if the user does not exist, create a new record
+        
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let homeViewController = storyBoard.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController
+        
+        self.present(homeViewController, animated: true, completion: nil)
+        return
+        
+//        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email"]).start {
+//            (connection, result, err) in
+//            
+//            if err != nil {
+//                print("Failed to get graph request: ", err)
+//                return
+//            }
+//            print(result)
+//        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,38 +70,16 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func loginUser(_ sender: UIButton) {
-        print("logged in")
+    // utilize the php script to see if a user already exists for this access token
+    func checkUserHasRegistered() {
+        return
     }
     
-//    override func viewDidLoad() {
-//        // Add a custom login button to your app
-//        let myLoginButton = UIButton(type: .custom)
-//        myLoginButton.backgroundColor = UIColor.darkGrayColor()
-//        myLoginButton.frame = CGRect(0, 0, 180, 40);
-//        myLoginButton.center = view.center;
-//        myLoginTitle.setTitle("My Login Button" forState: .normal)
-//        
-//        // Handle clicks on the button
-//        myLoginButton.addTarget(self, action: @selector(self.loginButtonClicked) forControlEvents: .TouchUpInside)
-//        
-//        // Add the button to the view
-//        view.addSubview(myLoginButton)
-//    }
+    // utilize the php script to create a new user record with this access token
+    func createNewUser() {
+        return
+    }
     
-    // Once the button is clicked, show the login dialog
-//    @objc func loginButtonClicked() {
-//        let loginManager = LoginManager()
-//        loginManager.logIn([ .publicProfile ], viewController: self) { loginResult in
-//            switch loginResult {
-//            case .failed(let error):
-//                print(error)
-//            case .cancelled:
-//                print("User cancelled login.")
-//            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-//                print("Logged in!")
-//            }
-//        }
-//    }
+
     
 }

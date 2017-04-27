@@ -58,9 +58,13 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
         
         var jsonResult: NSMutableArray = NSMutableArray()
         
-        do{
-//                        jsonResult = try JSONSerialization.jsonObject(with: self.data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSMutableArray
-            jsonResult = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSMutableArray
+        do {
+            //jsonResult = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSMutableArray
+            
+            let jsonResult1 = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as? NSArray
+            
+            jsonResult = try NSMutableArray(array: jsonResult1!)
+            
             
         } catch let error as NSError {
             print(error)
