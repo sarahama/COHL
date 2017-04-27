@@ -11,8 +11,8 @@ target 'moveMingo3' do
   pod 'FacebookLogin'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
-
   target 'moveMingo3Tests' do
+
     inherit! :search_paths
     # Pods for testing
   end
