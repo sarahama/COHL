@@ -45,7 +45,7 @@ class EventModel: NSObject {
     //prints object's current state
     
     override var description: String {
-        return "Name: \(name), Address: \(address), Start: \(start_date)), End: \(end_date)"
+        return "Name: \(String(describing: name)), Address: \(String(describing: address)), Start: \(String(describing: start_date))), End: \(String(describing: end_date))"
         
     }
     

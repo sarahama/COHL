@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import FBSDKLoginKit
 
 class WelcomePageViewController: UIPageViewController {
     
@@ -15,12 +15,31 @@ class WelcomePageViewController: UIPageViewController {
         super.viewDidLoad()
         
         dataSource = self
-        
+
+        // show the sign in pages
+        print ("display sign in options")
         if let firstViewController = orderedViewControllers.first {
-            setViewControllers([firstViewController],
-                direction: .forward,
-                animated: true,
-                completion: nil)
+                setViewControllers([firstViewController],
+                    direction: .forward,
+                    animated: true,
+                    completion: nil)
+        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // super.viewDidAppear()
+        
+        // if the user is already logged in redirect them to the home page
+        if FBSDKAccessToken.current() != nil {
+            print("user is already logged in")
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let homeViewController = storyBoard.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController
+            
+            self.present(homeViewController, animated: true, completion: nil)
+            return
+            
         }
     }
     
