@@ -63,7 +63,7 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
             
             let jsonResult1 = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as? NSArray
             
-            jsonResult = try NSMutableArray(array: jsonResult1!)
+            jsonResult = NSMutableArray(array: jsonResult1!)
             
             
         } catch let error as NSError {
