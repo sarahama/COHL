@@ -13,6 +13,8 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
     //Properties
     var feedItems: NSArray = NSArray()
     var selectedLocation : EventModel = EventModel()
+    var selectedEvent: EventModel!
+    var selectedEventAddress: String!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -78,6 +80,30 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         return myCell
     }
     
+    // define the segue on select
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedEvent = feedItems[indexPath.row] as! EventModel
+        let cell = tableView.cellForRow(at: indexPath) as! EventTableCell
+        selectedEventAddress = cell.address.text
+        self.performSegue(withIdentifier: "ShowEventDetails", sender: "EventClick")
+    }
+    
+    // prepare to segue to details view
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (sender as? String == "EventClick") {
+            let detailsVC = segue.destination as! DetailsViewController
+            detailsVC.event = selectedEvent
+            detailsVC.address = selectedEventAddress
+        } else {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let homeViewController = storyBoard.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController
+            
+            self.present(homeViewController, animated: true, completion: nil)
+            return
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

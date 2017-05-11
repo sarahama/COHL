@@ -3,12 +3,14 @@
 //  moveMingo3
 //
 //  Created by Sarah MacAdam on 1/7/17.
-//  Copyright © 2017 Sarah MacAdam. All rights reserved.
+//  Copyright © 2017 Sarah MacAdamvarll rights reserved.
 //
 
 import UIKit
 
 import FBSDKLoginKit
+
+
 
 class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
     
@@ -153,9 +155,11 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                         //getting the json response
                         msg = parseJSON["message"] as! String?
                         err = parseJSON["error"] as! String?
+                        current_user_id = (parseJSON["user_id"] as! Int?)!
                         //printing the response
                         print(msg)
                         print(err)
+                        print(current_user_id)
                     
                     }
                 } catch {

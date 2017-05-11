@@ -18,6 +18,8 @@ class EventModel: NSObject {
     var organization: String?
     var color: String?
     var details: String?
+    var event_id: String?
+    var points: String?
     
     
     //empty constructor
@@ -29,7 +31,7 @@ class EventModel: NSObject {
     
     //construct with @name, @address, @start_date, @end_date, @organization, @color, @details, and @points parameters
     
-    init(name: String, address: String, start_date: String, end_date: String, organization: String, color: String, details: String, points: String) {
+    init(name: String, address: String, start_date: String, end_date: String, organization: String, color: String, details: String, event_id: String, points: String) {
         
         self.name = name
         self.address = address
@@ -38,6 +40,8 @@ class EventModel: NSObject {
         self.organization = organization
         self.color = color
         self.details = details
+        self.event_id = event_id
+        self.points = points
         
     }
     

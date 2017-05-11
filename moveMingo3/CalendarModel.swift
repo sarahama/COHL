@@ -67,12 +67,15 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
                     let address:String = jsonElement["Event_Address"] as! String!
                     let start_date:String = jsonElement["Event_Start_Date"] as! String!
                     let end_date:String = jsonElement["Event_End_Date"] as! String!
-                    
+                    let details:String = jsonElement["Event_Details"] as! String!
+                    let event_id:String = jsonElement["Event_ID"] as! String!
                         
                     event.name = name
+                    event.details = details
                     event.address = address
                     event.start_date = start_date
                     event.end_date = end_date
+                    event.event_id = event_id
                         
                     
                     events_list.add(event)
