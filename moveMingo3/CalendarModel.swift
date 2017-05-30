@@ -21,88 +21,76 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
     var data : NSMutableData = NSMutableData()
 
     //this will be changed to the path on WH&W's server
-    let urlPath: String = "http://localhost/cohl_service.php"
+    //let urlPath: String =
+    let URL_GET_EVENTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/movemingo_get_upcoming_events.php"
     
 
     func downloadItems() {
         
-        let url: URL = URL(string: urlPath)!
-        var session: Foundation.URLSession!
-        let configuration = URLSessionConfiguration.default
+        //let url: URL = URL(string: urlPath)!
+        let requestURL = NSURL(string: URL_GET_EVENTS)
+        let request = NSMutableURLRequest(url: requestURL! as URL)
+        request.httpMethod = "GET"
         
-        
-        session = Foundation.URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
-        
-        let task = session.dataTask(with: url)
-        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: request as URLRequest){
+            data, response, error in
+            
+            //exiting if there is some error
+            if error != nil{
+                print("error is \(String(describing: error))")
+                return;
+            }
+
+            
+            //parsing the response
+            do {
+                //converting response to NSDictionary
+                var eventJSON: NSDictionary!
+                eventJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                
+                let events_list: NSMutableArray = NSMutableArray()
+               
+                var jsonElement: NSDictionary = NSDictionary()
+                let jsonElements:  NSArray = eventJSON["events"] as! NSArray
+                
+                for i in 0...(jsonElements.count-1)
+                {
+                    
+                    jsonElement = jsonElements[i] as! NSDictionary
+                    
+                    let event = EventModel()
+                    
+                    //the following insures none of the JsonElement values are nil through optional binding
+                    let name:String = jsonElement["Event_Name"] as! String!
+                    let address:String = jsonElement["Event_Address"] as! String!
+                    let start_date:String = jsonElement["Event_Start_Date"] as! String!
+                    let end_date:String = jsonElement["Event_End_Date"] as! String!
+                    
+                        
+                    event.name = name
+                    event.address = address
+                    event.start_date = start_date
+                    event.end_date = end_date
+                        
+                    
+                    events_list.add(event)
+                    
+                }
+                
+                DispatchQueue.main.async(execute: { () -> Void in
+                    
+                    self.delegate.itemsDownloaded(events_list)
+                    
+                })
+                
+            } catch {
+                print(error)
+            }
+        }
         task.resume()
         
     }
 
-    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
-        self.data.append(data);
-        
-    }
-    
-    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
-        if error != nil {
-            print("Failed to download data")
-        }else {
-            print("Data downloaded")
-            self.parseJSON()
-        }
-        
-    }
-    
-    func parseJSON() {
-        
-        var jsonResult: NSMutableArray = NSMutableArray()
-        
-        do {
-            //jsonResult = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as! NSMutableArray
-            
-            let jsonResult1 = try JSONSerialization.jsonObject(with: self.data as Data, options:JSONSerialization.ReadingOptions.allowFragments) as? NSArray
-            
-            jsonResult = try NSMutableArray(array: jsonResult1!)
-            
-            
-        } catch let error as NSError {
-            print(error)
-            
-        }
-        
-        var jsonElement: NSDictionary = NSDictionary()
-        let events: NSMutableArray = NSMutableArray()
-        
-        for i in 1...jsonResult.count
-        {
-            
-            jsonElement = jsonResult[i] as! NSDictionary
-            
-            let event = EventModel()
-            
-            //the following insures none of the JsonElement values are nil through optional binding
-            if let name = jsonElement["Event_Name"] as? String,
-                let address = jsonElement["Event_Address"] as? String,
-                let start_date = jsonElement["Event_Start_Date"] as? String,
-                let end_date = jsonElement["Event_End_Date"] as? String
-            {
-                
-                event.name = name
-                event.address = address
-                event.start_date = start_date
-                event.end_date = end_date
-                
-            }
-            
-            events.add(event)
-   
-        }
-        
-        DispatchQueue.main.async(execute: { () -> Void in
-            
-            self.delegate.itemsDownloaded(events)
-            
-        })
-   }
 }

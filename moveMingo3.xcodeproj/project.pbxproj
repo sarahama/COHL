@@ -680,7 +680,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = J2CG8FE3SC;
 				INFOPLIST_FILE = moveMingo3/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -697,7 +697,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = J2CG8FE3SC;
 				INFOPLIST_FILE = moveMingo3/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moveMingo3.smacadam.moveMingo3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
