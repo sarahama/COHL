@@ -13,6 +13,7 @@ class EventTableCell: UITableViewCell {
     //properties
     @IBOutlet weak var eventTitle: UIButton!
     
+    @IBOutlet weak var points: UILabel!
     @IBOutlet weak var address: UILabel!
     
     @IBOutlet weak var date: UILabel!

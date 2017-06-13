@@ -19,7 +19,6 @@
 		480CFB2B1E21D40800B6592C /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */; };
 		480CFB2D1E21DF3100B6592C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2C1E21DF3100B6592C /* SignUpViewController.swift */; };
 		480CFB2F1E21E2C700B6592C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2E1E21E2C700B6592C /* WelcomeViewController.swift */; };
-		480CFB331E2DB3B500B6592C /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB321E2DB3B500B6592C /* MyEventsTableViewController.swift */; };
 		480CFB391E2DC30500B6592C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB371E2DC30500B6592C /* Model.xcdatamodeld */; };
 		480CFB3C1E2DC5A700B6592C /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB3A1E2DC5A700B6592C /* Event+CoreDataProperties.swift */; };
 		480CFB3D1E2DC5A700B6592C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB3B1E2DC5A700B6592C /* Event.swift */; };
@@ -29,6 +28,9 @@
 		4865E9A21E80D94700E5DF75 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E9A11E80D94700E5DF75 /* EventModel.swift */; };
 		4865E9A41E80DCE200E5DF75 /* CalendarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E9A31E80DCE200E5DF75 /* CalendarModel.swift */; };
 		4865E9A61E8210AF00E5DF75 /* EventTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */; };
+		48727EB61EEEECF100936EB2 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48727EB51EEEECF100936EB2 /* TableSection.swift */; };
+		48727EB81EEEEE3100936EB2 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */; };
+		48727EBA1EEEF2BA00936EB2 /* ExpandableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48727EB91EEEF2BA00936EB2 /* ExpandableTableViewController.swift */; };
 		48C6830A1EC49B6A00B0653C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C683091EC49B6200B0653C /* DetailsViewController.swift */; };
 		48C6830C1EC4B89F00B0653C /* EventDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */; };
 		48FDE2161E497C2D0088BA9E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */; };
@@ -78,7 +80,6 @@
 		480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomePageViewController.swift; path = ../WelcomePageViewController.swift; sourceTree = "<group>"; };
 		480CFB2C1E21DF3100B6592C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		480CFB2E1E21E2C700B6592C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		480CFB321E2DB3B500B6592C /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
 		480CFB381E2DC30500B6592C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		480CFB3A1E2DC5A700B6592C /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		480CFB3B1E2DC5A700B6592C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -88,6 +89,9 @@
 		4865E9A11E80D94700E5DF75 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		4865E9A31E80DCE200E5DF75 /* CalendarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarModel.swift; sourceTree = "<group>"; };
 		4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableCell.swift; sourceTree = "<group>"; };
+		48727EB51EEEECF100936EB2 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
+		48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
+		48727EB91EEEF2BA00936EB2 /* ExpandableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewController.swift; sourceTree = "<group>"; };
 		48A768971EA56CC300AAA94D /* moveMingo3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = moveMingo3.entitlements; sourceTree = "<group>"; };
 		48C683091EC49B6200B0653C /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -153,16 +157,17 @@
 		480CFAF21E21BECD00B6592C /* moveMingo3 */ = {
 			isa = PBXGroup;
 			children = (
+				48727EB41EEEEC3A00936EB2 /* EventExpandableList */,
 				48A768971EA56CC300AAA94D /* moveMingo3.entitlements */,
 				480CFB3E1E2DC66700B6592C /* Core Data */,
 				480CFAF31E21BECD00B6592C /* AppDelegate.swift */,
 				480CFAF71E21BECD00B6592C /* Main.storyboard */,
+				48727EB91EEEF2BA00936EB2 /* ExpandableTableViewController.swift */,
 				48C683091EC49B6200B0653C /* DetailsViewController.swift */,
 				482F56331E5D4CD100E18C5C /* CarpoolsViewController.swift */,
 				482F56311E5D43C600E18C5C /* EventsViewController.swift */,
 				482F562F1E5D319A00E18C5C /* PassportViewController.swift */,
 				48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */,
-				480CFB321E2DB3B500B6592C /* MyEventsTableViewController.swift */,
 				480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */,
 				48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */,
 				480CFAF51E21BECD00B6592C /* ViewController.swift */,
@@ -207,6 +212,15 @@
 				480CFB371E2DC30500B6592C /* Model.xcdatamodeld */,
 			);
 			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		48727EB41EEEEC3A00936EB2 /* EventExpandableList */ = {
+			isa = PBXGroup;
+			children = (
+				48727EB51EEEECF100936EB2 /* TableSection.swift */,
+				48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */,
+			);
+			name = EventExpandableList;
 			sourceTree = "<group>";
 		};
 		4BD2A4BBD6EC583679EEB2DF /* Pods */ = {
@@ -527,15 +541,17 @@
 				4865E9A61E8210AF00E5DF75 /* EventTableCell.swift in Sources */,
 				480CFB2D1E21DF3100B6592C /* SignUpViewController.swift in Sources */,
 				480CFB271E21D03C00B6592C /* SignInViewController.swift in Sources */,
-				480CFB331E2DB3B500B6592C /* MyEventsTableViewController.swift in Sources */,
 				4865E9A21E80D94700E5DF75 /* EventModel.swift in Sources */,
 				480CFAF61E21BECD00B6592C /* ViewController.swift in Sources */,
 				48FDE2161E497C2D0088BA9E /* ProfileViewController.swift in Sources */,
+				48727EB81EEEEE3100936EB2 /* ExpandableHeaderView.swift in Sources */,
 				480CFAF41E21BECD00B6592C /* AppDelegate.swift in Sources */,
 				480CFB391E2DC30500B6592C /* Model.xcdatamodeld in Sources */,
 				482F56341E5D4CD100E18C5C /* CarpoolsViewController.swift in Sources */,
 				480CFAFC1E21BECD00B6592C /* moveMingo3.xcdatamodeld in Sources */,
+				48727EBA1EEEF2BA00936EB2 /* ExpandableTableViewController.swift in Sources */,
 				482F56301E5D319A00E18C5C /* PassportViewController.swift in Sources */,
+				48727EB61EEEECF100936EB2 /* TableSection.swift in Sources */,
 				480CFB2B1E21D40800B6592C /* WelcomePageViewController.swift in Sources */,
 				48FDE2181E4A2F0B0088BA9E /* HomeViewController.swift in Sources */,
 				480CFB2F1E21E2C700B6592C /* WelcomeViewController.swift in Sources */,

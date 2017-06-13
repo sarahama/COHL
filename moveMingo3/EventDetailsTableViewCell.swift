@@ -24,8 +24,12 @@ class EventDetailsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var photo: UIImageView!
     
+    @IBOutlet weak var points: UILabel!
     
     @IBOutlet weak var details: UILabel!
+    @IBOutlet weak var code: UITextField!
+    @IBOutlet weak var check_in: UIButton!
+    
     
     @IBOutlet weak var interested: UIButton!
     
@@ -35,7 +39,7 @@ class EventDetailsTableViewCell: UITableViewCell {
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        //super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }

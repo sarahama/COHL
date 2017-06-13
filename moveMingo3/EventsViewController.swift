@@ -28,7 +28,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         
         let calendarModel = CalendarModel()
         calendarModel.delegate = self
-        calendarModel.downloadItems()
+        calendarModel.downloadItems(select_type: event_select_type)
     
         // load the table
         DispatchQueue.main.async {
@@ -72,6 +72,7 @@ class EventsViewController: UIViewController, UITableViewDataSource, UITableView
         myCell.eventTitle!.setTitle(item.name, for: UIControlState())
         myCell.address!.text = item.address
         myCell.date!.text = item.start_date
+        myCell.points!.text = item.points! + " points"
         
         print("cell title")
         print(myCell.eventTitle)

@@ -22,15 +22,22 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
 
     //this will be changed to the path on WH&W's server
     //let urlPath: String =
-    let URL_GET_EVENTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/movemingo_get_upcoming_events.php"
+    let URL_GET_UPCOMING_EVENTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_events.php"
     
 
-    func downloadItems() {
+    func downloadItems(select_type: String) {
         
-        //let url: URL = URL(string: urlPath)!
-        let requestURL = NSURL(string: URL_GET_EVENTS)
+        let requestURL = NSURL(string: URL_GET_UPCOMING_EVENTS)
         let request = NSMutableURLRequest(url: requestURL! as URL)
-        request.httpMethod = "GET"
+        request.httpMethod = "POST"
+        
+        var postParameters = "select_type="+select_type
+        if(select_type != "all"){
+            postParameters = "select_type="+select_type+"&user_id="+"\(current_user_id)"
+        }
+        
+        //adding the parameters to request body
+        request.httpBody = postParameters.data(using: .utf8)!
         
         //creating a task to send the post request
         let task = URLSession.shared.dataTask(with: request as URLRequest){
@@ -42,6 +49,8 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
                 return;
             }
 
+            print(data!)
+            print("parsing response...")
             
             //parsing the response
             do {
@@ -68,14 +77,16 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
                     let start_date:String = jsonElement["Event_Start_Date"] as! String!
                     let end_date:String = jsonElement["Event_End_Date"] as! String!
                     let details:String = jsonElement["Event_Details"] as! String!
-                    let event_id:String = jsonElement["Event_ID"] as! String!
+                    let event_id:Int = jsonElement["Event_ID"] as! Int!
+                    let points:Int = jsonElement["Event_Points"] as! Int!
                         
                     event.name = name
                     event.details = details
                     event.address = address
                     event.start_date = start_date
                     event.end_date = end_date
-                    event.event_id = event_id
+                    event.event_id = "\(event_id)"
+                    event.points = "\(points)"
                         
                     
                     events_list.add(event)

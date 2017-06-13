@@ -8,11 +8,13 @@
 
 import UIKit
 
+var event_select_type = "all"
+
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        event_select_type = "all"
         // Do any additional setup after loading the view.
     }
 

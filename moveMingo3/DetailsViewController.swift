@@ -13,8 +13,11 @@ class DetailsViewController: UIViewController, UITableViewDataSource {
     // Properties declarations at the top of the class
     var address: String!
     var event: EventModel!
+    var code: UITextField!
     
     let URL_CREATE_INTEREST:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_interests.php"
+    
+    let URL_CHECK_IN:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_attendance.php"
 
     
     @IBOutlet weak var tableView: UITableView!
@@ -47,8 +50,12 @@ class DetailsViewController: UIViewController, UITableViewDataSource {
         cell.address!.text = event.address
         cell.details!.text = event.details
         cell.details.numberOfLines = 0
+        cell.points!.text = event.points! + " points"
         // define action for the interested button
         cell.interested.addTarget(self, action:#selector(userIsInterested), for: .touchUpInside)
+        // set the variable to be this cell
+        code = cell.code
+        cell.check_in.addTarget(self, action:#selector(userIsCheckingIn), for: .touchUpInside)
         
         let url = NSURL(string: "http://Sarahs-MacBook-Pro-2.local/COHL/images/5k.jpg")
         cell.photo.image = UIImage(data: NSData(contentsOf: url! as URL)! as Data)
@@ -130,6 +137,82 @@ class DetailsViewController: UIViewController, UITableViewDataSource {
         self.present(homeViewController, animated: true, completion: nil)
         return
 
+    }
+    
+    // make a new record
+    func userIsCheckingIn(){
+        print("the user is checking in to something")
+        print(event.event_id)
+        print(code)
+        //created NSURL
+        let requestURL:NSURL = NSURL(string: URL_CHECK_IN)!
+        
+        
+        //creating NSMutableURLRequest
+        let request = NSMutableURLRequest(url: requestURL as URL)
+        
+        //setting the method to post
+        request.httpMethod = "POST"
+        print("the current user is")
+        print(current_user_id)
+        
+        //getting values for insert
+        
+        let user_id = "\(current_user_id)"
+        
+        
+        //creating the post parameter by concatenating the keys and values from text field
+        let postParameters = "user_id="+user_id+"&event_id="+event.event_id!+"&code="+code.text!;
+        print(postParameters)
+        
+        //adding the parameters to request body
+        request.httpBody = postParameters.data(using: .utf8)!
+        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: request as URLRequest){
+            (data, response, error) in
+            
+            if error != nil{
+                print("error is \(error)")
+                return;
+            }
+            print(data!)
+            print("parsing response...")
+            //parsing the response
+            do {
+                //converting resonse to NSDictionary
+                
+                let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .  mutableContainers) as? NSDictionary
+                
+                //parsing the json
+                if let parseJSON = myJSON {
+                    
+                    //creating a string
+                    var msg : String!
+                    var err : String!
+                    
+                    //getting the json response
+                    msg = parseJSON["message"] as! String?
+                    err = parseJSON["error"] as! String?
+                    //printing the response
+                    print(msg)
+                    print(err)
+                    
+                }
+            } catch {
+                print(error)
+            }
+        }
+        
+        task.resume()
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let homeViewController = storyBoard.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController
+        
+        self.present(homeViewController, animated: true, completion: nil)
+        return
+        
     }
 
 }

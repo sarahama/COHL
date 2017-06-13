@@ -13,12 +13,17 @@ import FacebookCore
 class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
 
 
+    @IBOutlet weak var view_interested_events: UIButton!
     
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var profileName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // set the event select type to interested incase they want to view 
+        // there interested events from this page
+        event_select_type = "interested"
         
         if let accessToken = AccessToken.current {
             print(accessToken)
