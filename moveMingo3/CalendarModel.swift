@@ -85,6 +85,7 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
                     event.address = address
                     event.start_date = start_date
                     event.end_date = end_date
+                    event.expanded = false
                     event.event_id = "\(event_id)"
                     event.points = "\(points)"
                         

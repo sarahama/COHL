@@ -31,6 +31,8 @@
 		48727EB61EEEECF100936EB2 /* TableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48727EB51EEEECF100936EB2 /* TableSection.swift */; };
 		48727EB81EEEEE3100936EB2 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */; };
 		48727EBA1EEEF2BA00936EB2 /* ExpandableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48727EB91EEEF2BA00936EB2 /* ExpandableTableViewController.swift */; };
+		48727EBE1EF0448300936EB2 /* SimpleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48727EBC1EF0448300936EB2 /* SimpleViewController.swift */; };
+		48727EBF1EF0448300936EB2 /* SimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48727EBD1EF0448300936EB2 /* SimpleViewController.xib */; };
 		48C6830A1EC49B6A00B0653C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C683091EC49B6200B0653C /* DetailsViewController.swift */; };
 		48C6830C1EC4B89F00B0653C /* EventDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */; };
 		48FDE2161E497C2D0088BA9E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */; };
@@ -92,6 +94,8 @@
 		48727EB51EEEECF100936EB2 /* TableSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableSection.swift; sourceTree = "<group>"; };
 		48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		48727EB91EEEF2BA00936EB2 /* ExpandableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewController.swift; sourceTree = "<group>"; };
+		48727EBC1EF0448300936EB2 /* SimpleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleViewController.swift; sourceTree = "<group>"; };
+		48727EBD1EF0448300936EB2 /* SimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleViewController.xib; sourceTree = "<group>"; };
 		48A768971EA56CC300AAA94D /* moveMingo3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = moveMingo3.entitlements; sourceTree = "<group>"; };
 		48C683091EC49B6200B0653C /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 		480CFAF21E21BECD00B6592C /* moveMingo3 */ = {
 			isa = PBXGroup;
 			children = (
+				48727EBB1EF0444800936EB2 /* SimpleVC */,
 				48727EB41EEEEC3A00936EB2 /* EventExpandableList */,
 				48A768971EA56CC300AAA94D /* moveMingo3.entitlements */,
 				480CFB3E1E2DC66700B6592C /* Core Data */,
@@ -221,6 +226,15 @@
 				48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */,
 			);
 			name = EventExpandableList;
+			sourceTree = "<group>";
+		};
+		48727EBB1EF0444800936EB2 /* SimpleVC */ = {
+			isa = PBXGroup;
+			children = (
+				48727EBC1EF0448300936EB2 /* SimpleViewController.swift */,
+				48727EBD1EF0448300936EB2 /* SimpleViewController.xib */,
+			);
+			name = SimpleVC;
 			sourceTree = "<group>";
 		};
 		4BD2A4BBD6EC583679EEB2DF /* Pods */ = {
@@ -372,6 +386,7 @@
 			files = (
 				480CFB011E21BECD00B6592C /* LaunchScreen.storyboard in Resources */,
 				480CFAFE1E21BECD00B6592C /* Assets.xcassets in Resources */,
+				48727EBF1EF0448300936EB2 /* SimpleViewController.xib in Resources */,
 				480CFAF91E21BECD00B6592C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +564,7 @@
 				480CFB391E2DC30500B6592C /* Model.xcdatamodeld in Sources */,
 				482F56341E5D4CD100E18C5C /* CarpoolsViewController.swift in Sources */,
 				480CFAFC1E21BECD00B6592C /* moveMingo3.xcdatamodeld in Sources */,
+				48727EBE1EF0448300936EB2 /* SimpleViewController.swift in Sources */,
 				48727EBA1EEEF2BA00936EB2 /* ExpandableTableViewController.swift in Sources */,
 				482F56301E5D319A00E18C5C /* PassportViewController.swift in Sources */,
 				48727EB61EEEECF100936EB2 /* TableSection.swift in Sources */,

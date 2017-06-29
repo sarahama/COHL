@@ -20,6 +20,7 @@ class EventModel: NSObject {
     var details: String?
     var event_id: String?
     var points: String?
+    var expanded: Bool?
     
     
     //empty constructor
@@ -42,6 +43,7 @@ class EventModel: NSObject {
         self.details = details
         self.event_id = event_id
         self.points = points
+        self.expanded = false
         
     }
     
