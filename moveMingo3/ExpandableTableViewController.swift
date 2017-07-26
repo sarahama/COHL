@@ -17,22 +17,10 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
     var selectedEvent: EventModel!
     var selectedEventAddress: String!
     
-//    var sections = [
-//    
-//        Section(genre: "Animation",
-//                movies: ["The Lion King", "Tarzan", "Tangled"],
-//                expanded: false),
-//        
-//        Section(genre: "Superhero",
-//                movies: ["Wonder Woman", "Batman"],
-//                expanded: false),
-//        
-//        Section(genre: "Thriller",
-//                movies: ["Disturbia", "Get Out"],
-//                expanded: false)
-//        
-//    ]
-//    
+    let URL_CREATE_INTEREST:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_interests.php"
+    
+    let URL_CHECK_IN:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_attendance.php"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //set delegates and initialize homeModel
@@ -85,7 +73,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
         print("setting height")
         if ((feedItems[indexPath.section] as! EventModel).expanded)! {
             print("finished setting")
-            return 200
+            return 250
         } else {
             print("finished setting")
             return 0
@@ -104,9 +92,43 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "labelCell")!
-        cell.textLabel?.text = "details"
-        return cell
+        // define the cell based on whether the event is occuring now or in the future
+        let event = feedItems[indexPath.section] as! EventModel
+        let eventStartTime = event.start_date?.components(separatedBy: " ")
+        let eventDateStr = eventStartTime?[0]
+        
+        // get the current time
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" //Your New Date format as per requirement change it own
+
+        let eventDate = dateFormatter.date(from: eventDateStr!)
+        
+        
+        // determine if the event is happening today or in the future
+        if(currentDate < eventDate!) {
+            let cell = Bundle.main.loadNibNamed("UpcomingEventDetailCell", owner: self, options: nil)?.first as! UpcomingEventDetailCell
+            
+            cell.eventDetails.text = event.details
+            
+            // add the interested action
+            cell.interested.tag = Int(event.event_id!)!
+            cell.interested.addTarget(self, action:#selector(userIsInterested), for: .touchUpInside)
+            
+            return cell
+        } else {
+            let cell = Bundle.main.loadNibNamed("OccurringEventDetailCell", owner: self, options: nil)?.first as! OccurringEventDetailCell
+            cell.eventDetails.text = event.details
+            
+            // add the check in action to the cell
+            cell.checkIn.tag = Int(event.event_id!)!
+            cell.checkIn.addTarget(self, action:#selector(userIsCheckingIn), for: .touchUpInside)
+            
+            return cell
+        }
+        
+
+        
     }
     
     
@@ -120,16 +142,199 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
         tableView.endUpdates()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected")
-        let simpleVC = SimpleViewController()
-        // simpleVC.customInit(imageName: sections[indexPath.section].movies[indexPath.row])
-        print("initialize")
-        simpleVC.customInit(imageName: "BackgroundMountain")
-        tableView.deselectRow(at: indexPath, animated: true)
-        print("push to navigation")
-        self.navigationController?.pushViewController(simpleVC, animated: true)
+    
+    
+    // make a new record
+    func userIsInterested(sender:UIButton){
+        
+        // add the interested action to the cell
+        let alert = UIAlertController(title: "My Interests", message: "Would you like to add this to your interested events?", preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Add Event", style: .default) { action in
+            // create a new record
+            print("the user is interested in something")
+            print(sender.tag)
+            //created NSURL
+            let requestURL:NSURL = NSURL(string: self.URL_CREATE_INTEREST)!
+            
+            
+            //creating NSMutableURLRequest
+            let request = NSMutableURLRequest(url: requestURL as URL)
+            
+            //setting the method to post
+            request.httpMethod = "POST"
+            print("the current user is")
+            print(current_user_id)
+            
+            //getting values for insert
+            
+            let user_id = "\(current_user_id)"
+            let event_id = "\(sender.tag)"
+            
+            //creating the post parameter by concatenating the keys and values from text field
+            let postParameters = "user_id="+user_id+"&event_id="+event_id;
+            print(postParameters)
+            
+            //adding the parameters to request body
+            request.httpBody = postParameters.data(using: .utf8)!
+            
+            //creating a task to send the post request
+            let task = URLSession.shared.dataTask(with: request as URLRequest){
+                (data, response, error) in
+                
+                if error != nil{
+                    print("error is \(String(describing: error))")
+                    return;
+                }
+                print(data!)
+                print("parsing response...")
+                //parsing the response
+                do {
+                    //converting resonse to NSDictionary
+                    
+                    let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .  mutableContainers) as? NSDictionary
+                    
+                    //parsing the json
+                    if let parseJSON = myJSON {
+                        
+                        //creating a string
+                        var msg : String!
+                        var err : String!
+                        
+                        //getting the json response
+                        msg = parseJSON["message"] as! String?
+                        err = parseJSON["error"] as! String?
+                        //printing the response
+                        print(msg)
+                        print(err)
+                        
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+            
+            task.resume()
+            
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default) { action in
+            // do nothing
+        })
+        
+        self.present(alert, animated: true)
+
+        return
+        
     }
+    
+    
+    func userIsCheckingIn(sender:UIButton){
+        let alertController = UIAlertController(title: "Check In!", message: "Enter the event code to earn your points", preferredStyle: .alert)
+        
+
+        alertController.addAction(UIAlertAction(title: "Check in", style: .default, handler: {
+            alert -> Void in
+            //Section 1
+            let code = alertController.textFields![0] as UITextField
+            print(code.text ?? "")
+            
+            print("the user is checking in to something")
+            print(sender.tag)
+            //created NSURL
+            let requestURL:NSURL = NSURL(string: self.URL_CHECK_IN)!
+            
+            
+            //creating NSMutableURLRequest
+            let request = NSMutableURLRequest(url: requestURL as URL)
+            
+            //setting the method to post
+            request.httpMethod = "POST"
+            print("the current user is")
+            print(current_user_id)
+            
+            //getting values for insert
+            
+            let user_id = "\(current_user_id)"
+            let event_id = "\(sender.tag)"
+            
+            //creating the post parameter by concatenating the keys and values from text field
+            let postParameters = "user_id="+user_id+"&event_id="+event_id+"&code="+code.text!;
+            print(postParameters)
+            
+            //adding the parameters to request body
+            request.httpBody = postParameters.data(using: .utf8)!
+            
+            //creating a task to send the post request
+            let task = URLSession.shared.dataTask(with: request as URLRequest){
+                (data, response, error) in
+                
+                if error != nil{
+                    print("error is \(String(describing: error))")
+                    return;
+                }
+                print(data!)
+                print("parsing response...")
+                //parsing the response
+                do {
+                    //converting resonse to NSDictionary
+                    
+                    let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .  mutableContainers) as? NSDictionary
+                    
+                    //parsing the json
+                    if let parseJSON = myJSON {
+                        
+                        //creating a string
+                        var msg : String!
+                        var err : String!
+                        
+                        //getting the json response
+                        msg = parseJSON["message"] as! String?
+                        err = parseJSON["error"] as! String?
+                        //printing the response
+                        print(msg)
+                        print(err)
+                        
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+            
+            task.resume()
+
+            
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default) { action in
+            // do nothing
+        })
+            
+        //Section 2
+        alertController.addTextField(configurationHandler: { (textField) -> Void in
+            textField.placeholder = "Event Code"
+            textField.textAlignment = .center
+            textField.isSecureTextEntry = true
+        })
+        
+        self.present(alertController, animated: true)
+        
+
+        return
+        
+    }
+
+    
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("selected")
+//        let simpleVC = SimpleViewController()
+//
+//        print("initialize")
+//        simpleVC.customInit(imageName: "BackgroundMountain")
+//        tableView.deselectRow(at: indexPath, animated: true)
+//        print("push to navigation")
+//        self.navigationController?.pushViewController(simpleVC, animated: true)
+//    }
     
     
     /*

@@ -22,6 +22,10 @@
 		480CFB391E2DC30500B6592C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB371E2DC30500B6592C /* Model.xcdatamodeld */; };
 		480CFB3C1E2DC5A700B6592C /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB3A1E2DC5A700B6592C /* Event+CoreDataProperties.swift */; };
 		480CFB3D1E2DC5A700B6592C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB3B1E2DC5A700B6592C /* Event.swift */; };
+		4811F2A81F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811F2A61F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift */; };
+		4811F2A91F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4811F2A71F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib */; };
+		4811F2AC1F0F267400D98C6A /* OccurringEventDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811F2AA1F0F267200D98C6A /* OccurringEventDetailCell.swift */; };
+		4811F2AD1F0F267600D98C6A /* OccurringEventDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4811F2AB1F0F267300D98C6A /* OccurringEventDetailCell.xib */; };
 		482F56301E5D319A00E18C5C /* PassportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482F562F1E5D319A00E18C5C /* PassportViewController.swift */; };
 		482F56321E5D43C600E18C5C /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482F56311E5D43C600E18C5C /* EventsViewController.swift */; };
 		482F56341E5D4CD100E18C5C /* CarpoolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482F56331E5D4CD100E18C5C /* CarpoolsViewController.swift */; };
@@ -85,6 +89,10 @@
 		480CFB381E2DC30500B6592C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		480CFB3A1E2DC5A700B6592C /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		480CFB3B1E2DC5A700B6592C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		4811F2A61F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEventDetailCell.swift; sourceTree = "<group>"; };
+		4811F2A71F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpcomingEventDetailCell.xib; sourceTree = "<group>"; };
+		4811F2AA1F0F267200D98C6A /* OccurringEventDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OccurringEventDetailCell.swift; sourceTree = "<group>"; };
+		4811F2AB1F0F267300D98C6A /* OccurringEventDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OccurringEventDetailCell.xib; sourceTree = "<group>"; };
 		482F562F1E5D319A00E18C5C /* PassportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassportViewController.swift; sourceTree = "<group>"; };
 		482F56311E5D43C600E18C5C /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		482F56331E5D4CD100E18C5C /* CarpoolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarpoolsViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +169,8 @@
 		480CFAF21E21BECD00B6592C /* moveMingo3 */ = {
 			isa = PBXGroup;
 			children = (
+				4811F2A61F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift */,
+				4811F2A71F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib */,
 				48727EBB1EF0444800936EB2 /* SimpleVC */,
 				48727EB41EEEEC3A00936EB2 /* EventExpandableList */,
 				48A768971EA56CC300AAA94D /* moveMingo3.entitlements */,
@@ -187,6 +197,8 @@
 				4865E9A31E80DCE200E5DF75 /* CalendarModel.swift */,
 				4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */,
 				48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */,
+				4811F2AA1F0F267200D98C6A /* OccurringEventDetailCell.swift */,
+				4811F2AB1F0F267300D98C6A /* OccurringEventDetailCell.xib */,
 			);
 			path = moveMingo3;
 			sourceTree = "<group>";
@@ -337,7 +349,7 @@
 				TargetAttributes = {
 					480CFAEF1E21BECD00B6592C = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = J2CG8FE3SC;
+						DevelopmentTeam = MYCEW9NT4J;
 						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -386,7 +398,9 @@
 			files = (
 				480CFB011E21BECD00B6592C /* LaunchScreen.storyboard in Resources */,
 				480CFAFE1E21BECD00B6592C /* Assets.xcassets in Resources */,
+				4811F2AD1F0F267600D98C6A /* OccurringEventDetailCell.xib in Resources */,
 				48727EBF1EF0448300936EB2 /* SimpleViewController.xib in Resources */,
+				4811F2A91F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib in Resources */,
 				480CFAF91E21BECD00B6592C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +578,8 @@
 				480CFB391E2DC30500B6592C /* Model.xcdatamodeld in Sources */,
 				482F56341E5D4CD100E18C5C /* CarpoolsViewController.swift in Sources */,
 				480CFAFC1E21BECD00B6592C /* moveMingo3.xcdatamodeld in Sources */,
+				4811F2AC1F0F267400D98C6A /* OccurringEventDetailCell.swift in Sources */,
+				4811F2A81F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift in Sources */,
 				48727EBE1EF0448300936EB2 /* SimpleViewController.swift in Sources */,
 				48727EBA1EEEF2BA00936EB2 /* ExpandableTableViewController.swift in Sources */,
 				482F56301E5D319A00E18C5C /* PassportViewController.swift in Sources */,
@@ -718,7 +734,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = moveMingo3/moveMingo3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = J2CG8FE3SC;
+				DEVELOPMENT_TEAM = MYCEW9NT4J;
 				INFOPLIST_FILE = moveMingo3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -735,7 +751,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = moveMingo3/moveMingo3.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = J2CG8FE3SC;
+				DEVELOPMENT_TEAM = MYCEW9NT4J;
 				INFOPLIST_FILE = moveMingo3/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

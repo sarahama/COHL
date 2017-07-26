@@ -19,7 +19,9 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
     var eventTitle: String!
     var eventPoints: String!
     var eventAddress: String!
-    var eventStart: String!
+    var eventDate: String!
+    var eventTime: String!
+    var timeColor: UIColor!
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -40,10 +42,59 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         //self.textLabel?.text = title
         //self.eventTitle = title
         self.eventTitle = event.name!
-        self.eventPoints = event.points!
+        self.eventPoints = event.points! + " points"
         self.eventAddress = event.address!
         self.section = section
         self.delegate = delegate
+        let originalStartDate = event.start_date?.components(separatedBy: " ")
+        let originalEndDate = event.end_date?.components(separatedBy: " ")
+        
+        let startDate = originalStartDate?[0]
+        let startTime = originalStartDate?[1]
+        
+        let endDate = originalEndDate?[0]
+        let endTime = originalEndDate?[1]
+        
+        // format the dates
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd" //Your New Date format as per requirement change it own
+        
+        let dateStartDate = dateFormatter.date(from: startDate!)
+        // let dateEndDate = dateFormatter.date(from: endDate!)
+        
+        // assume events are only one day long
+        self.eventDate = dateFormatter.string(from: dateStartDate!)
+
+        
+        // if the event is occurring today, say "Today" and change the color
+        let currentDate = Date()
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateFormat = "yyyy-MM-dd" //Your New Date format as per requirement change it own
+        
+        let compareStart = dateFormatter2.date(from: startDate!)
+        let compareEnd = dateFormatter2.date(from: endDate!)
+        
+        if (currentDate >= compareStart! && currentDate <= compareEnd!) {
+            self.timeColor = UIColor.init(red: 77.0/255.0, green: 136.0/255.0, blue: 135.0/255.0, alpha: 1)
+            self.eventTime = "Today "
+        } else {
+            self.timeColor = UIColor.black
+            self.eventTime = ""
+        }
+        
+
+        
+        // format the times
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "h:mm:ss"
+
+        
+        let timeStartTime = dateFormatter.date(from: startDate!)
+        let timeEndTime = dateFormatter.date(from: endDate!)
+        
+        self.eventTime = self.eventTime + timeFormatter.string(from: timeStartTime!)
+            + " - " + timeFormatter.string(from: timeEndTime!)
+        
     }
     
     
@@ -83,14 +134,15 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         
         // add the event date
         let eventDate = UILabel()
-        eventDate.text = self.eventStart
+        eventDate.text = self.eventDate
         eventDate.font = eventDate.font.withSize(14)
         eventDate.frame = CGRect(x: 30, y: 80, width: 150, height: 35)
         self.contentView.addSubview(eventDate)
         
         // add the event time
         let eventTime = UILabel()
-        eventTime.text = "3:00 PM"
+        eventTime.text = self.eventTime
+        eventTime.textColor = self.timeColor
         eventTime.font = eventTime.font.withSize(14)
         eventTime.frame = CGRect(x: 190, y: 80, width: 100, height: 35)
         self.contentView.addSubview(eventTime)
