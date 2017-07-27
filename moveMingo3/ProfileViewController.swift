@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
         super.viewDidLoad()
         
         // set the event select type to interested incase they want to view 
-        // there interested events from this page
+        // their interested events from this page
         event_select_type = "interested"
         
         if let accessToken = AccessToken.current {

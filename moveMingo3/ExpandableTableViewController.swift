@@ -11,7 +11,11 @@ import UIKit
 class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CalendarModelProtocal, ExpandableHeaderViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var colorStrip: UIImageView!
+    @IBOutlet weak var tableTitle: UILabel!
 
+    @IBOutlet weak var fleckStrip: UIImageView!
+    
     var feedItems: NSArray = NSArray()
     var selectedLocation : EventModel = EventModel()
     var selectedEvent: EventModel!
@@ -21,7 +25,21 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
     
     let URL_CHECK_IN:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_attendance.php"
     
+    
     override func viewDidLoad() {
+        // set the ui if viewing interested events
+        if (event_select_type == "interested") {
+            self.colorStrip.image = UIImage(named: "greenStrip")
+            self.tableTitle.text = "Interested Events"
+            self.fleckStrip.image = UIImage(named: "greenFleckStrip")
+        }
+        // set for viewing current events for check in
+        if (event_select_type == "current") {
+            self.colorStrip.image = UIImage(named: "brownStrip")
+            self.tableTitle.text = "Check In"
+        }
+        
+        
         super.viewDidLoad()
         //set delegates and initialize homeModel
         
@@ -150,6 +168,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
         // add the interested action to the cell
         let alert = UIAlertController(title: "My Interests", message: "Would you like to add this to your interested events?", preferredStyle: .actionSheet)
         
+        
         alert.addAction(UIAlertAction(title: "Add Event", style: .default) { action in
             // create a new record
             print("the user is interested in something")
@@ -222,7 +241,8 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
         })
         
         self.present(alert, animated: true)
-
+        
+        
         return
         
     }
@@ -319,6 +339,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
         self.present(alertController, animated: true)
         
 
+        
         return
         
     }

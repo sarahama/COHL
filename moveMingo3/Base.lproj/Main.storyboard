@@ -224,7 +224,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="k3v-Zn-FUx" kind="show" id="SI6-be-FeI"/>
+                                            <segue destination="8E9-yA-AFA" kind="show" id="dYU-iy-fSm"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="by using Bluetooth and the event code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi0-Ws-t2A">
@@ -276,7 +276,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="k3v-Zn-FUx" kind="show" id="8rE-vm-0BK"/>
+                                            <segue destination="8E9-yA-AFA" kind="show" id="RgE-8Z-5Lf"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="All-time attended events and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PW-HL-5fV">
@@ -426,10 +426,10 @@
             </objects>
             <point key="canvasLocation" x="1976.8" y="-1164.4677661169417"/>
         </scene>
-        <!--Movies-->
+        <!--Events-->
         <scene sceneID="4IE-kL-gGW">
             <objects>
-                <viewController id="8E9-yA-AFA" customClass="ExpandableTableViewController" customModule="moveMingo3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8E9-yA-AFA" userLabel="Events" customClass="ExpandableTableViewController" customModule="moveMingo3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aqg-Uq-xq5"/>
                         <viewControllerLayoutGuide type="bottom" id="3V1-59-t6y"/>
@@ -438,6 +438,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdZ-vI-zYU">
+                                <rect key="frame" x="149" y="107" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.96726452230000004" green="0.96559329049999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gr9-Ve-npi">
                                 <rect key="frame" x="0.0" y="155" width="375" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -446,7 +452,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sVx-4H-NW7" id="lF4-r7-pId">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -456,10 +462,16 @@
                                     <outlet property="delegate" destination="8E9-yA-AFA" id="86c-Jv-dRv"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tealStrip" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-iX-h3T">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tealStrip" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-iX-h3T" userLabel="colorStrip">
                                 <rect key="frame" x="0.0" y="88" width="375" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mfN-iX-h3T" secondAttribute="height" multiplier="375:59" id="tbH-SW-8kF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gfe-GA-0vv" userLabel="fleckStrip">
+                                <rect key="frame" x="0.0" y="88" width="375" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gfe-GA-0vv" secondAttribute="height" multiplier="375:59" id="1LQ-D8-jU1"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tc-cP-RTU" userLabel="homeButton">
@@ -472,20 +484,17 @@
                                     <segue destination="zyc-ng-jFQ" kind="show" id="JCI-8g-Ieg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EVENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdZ-vI-zYU">
-                                <rect key="frame" x="149" y="107" width="77" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="textColor" red="0.96726452230000004" green="0.96559329049999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gfe-GA-0vv" firstAttribute="top" secondItem="aqg-Uq-xq5" secondAttribute="bottom" constant="68" id="9UI-L0-VGl"/>
                             <constraint firstItem="mfN-iX-h3T" firstAttribute="top" secondItem="aqg-Uq-xq5" secondAttribute="bottom" constant="68" id="BMy-bZ-bYw"/>
                             <constraint firstAttribute="trailing" secondItem="Gr9-Ve-npi" secondAttribute="trailing" id="HPo-fH-cQz"/>
                             <constraint firstItem="9Tc-cP-RTU" firstAttribute="centerX" secondItem="b1Y-La-me6" secondAttribute="centerX" id="LKW-wc-IkL"/>
                             <constraint firstItem="WdZ-vI-zYU" firstAttribute="centerX" secondItem="b1Y-La-me6" secondAttribute="centerX" id="Spk-qs-Y15"/>
                             <constraint firstItem="Gr9-Ve-npi" firstAttribute="bottom" secondItem="3V1-59-t6y" secondAttribute="top" id="aPh-nt-3De"/>
+                            <constraint firstItem="gfe-GA-0vv" firstAttribute="width" secondItem="gfe-GA-0vv" secondAttribute="height" multiplier="375:59" id="bed-g6-NBo"/>
+                            <constraint firstItem="gfe-GA-0vv" firstAttribute="width" secondItem="b1Y-La-me6" secondAttribute="width" id="eAV-eN-OJ7"/>
                             <constraint firstItem="mfN-iX-h3T" firstAttribute="centerX" secondItem="b1Y-La-me6" secondAttribute="centerX" id="glH-bg-Ed2"/>
                             <constraint firstItem="9Tc-cP-RTU" firstAttribute="top" secondItem="aqg-Uq-xq5" secondAttribute="bottom" constant="8" id="kC0-Zl-9Ti"/>
                             <constraint firstItem="Gr9-Ve-npi" firstAttribute="top" secondItem="aqg-Uq-xq5" secondAttribute="bottom" constant="135" id="rrJ-q3-zVh"/>
@@ -496,6 +505,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="G5N-8u-QDa"/>
                     <connections>
+                        <outlet property="colorStrip" destination="mfN-iX-h3T" id="WTi-Io-XeI"/>
+                        <outlet property="fleckStrip" destination="gfe-GA-0vv" id="xYj-8X-OgY"/>
+                        <outlet property="tableTitle" destination="WdZ-vI-zYU" id="DZM-bu-FEL"/>
                         <outlet property="tableView" destination="Gr9-Ve-npi" id="hmi-Kb-VNm"/>
                     </connections>
                 </viewController>
@@ -539,7 +551,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="125"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bn3-JP-UjD" id="XC6-Mq-TwI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="124.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="blackBullet" translatesAutoresizingMaskIntoConstraints="NO" id="19c-2e-uaM">
@@ -661,7 +673,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="431"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hLr-Ly-3TH" id="KRG-oK-hrT">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="431"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="430.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="td9-Hw-SEK" userLabel="EventTitle">
@@ -1227,7 +1239,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="k3v-Zn-FUx" kind="show" id="I4V-tb-0in"/>
+                                            <segue destination="8E9-yA-AFA" kind="show" id="f7Q-n4-CX2"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="grayAdd" translatesAutoresizingMaskIntoConstraints="NO" id="Dsq-KG-1Vp">
@@ -1482,8 +1494,7 @@
         <image name="underline" width="76" height="2"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9aR-1I-IWD"/>
-        <segue reference="JCI-8g-Ieg"/>
-        <segue reference="1el-HL-4R0"/>
+        <segue reference="dYU-iy-fSm"/>
+        <segue reference="8mA-4C-fLu"/>
     </inferredMetricsTieBreakers>
 </document>
