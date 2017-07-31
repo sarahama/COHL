@@ -79,7 +79,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 0
     }
     
     
