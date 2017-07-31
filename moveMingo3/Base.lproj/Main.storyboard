@@ -275,9 +275,6 @@
                                         <state key="normal" title="19 EVENTS ATTENDED">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="8E9-yA-AFA" kind="show" id="RgE-8Z-5Lf"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="All-time attended events and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4PW-HL-5fV">
                                         <rect key="frame" x="42" y="40" width="144" height="12"/>
@@ -421,6 +418,7 @@
                     <connections>
                         <outlet property="current_points" destination="R8w-OU-HJz" id="zi8-Hp-qXq"/>
                         <outlet property="fb_name" destination="h02-yJ-cWV" id="xfm-fa-geI"/>
+                        <outlet property="interestedButton" destination="84M-8x-ljq" id="ufZ-Ld-wpq"/>
                         <outlet property="profilePic" destination="VH5-iQ-SEz" id="ch9-DJ-PvK"/>
                         <outlet property="total_points" destination="vCb-NY-x7c" id="QNc-d8-4r7"/>
                     </connections>
@@ -517,7 +515,7 @@
         <!--Events-->
         <scene sceneID="4IE-kL-gGW">
             <objects>
-                <viewController id="8E9-yA-AFA" userLabel="Events" customClass="ExpandableTableViewController" customModule="moveMingo3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpandableTableViewController" id="8E9-yA-AFA" userLabel="Events" customClass="ExpandableTableViewController" customModule="moveMingo3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aqg-Uq-xq5"/>
                         <viewControllerLayoutGuide type="bottom" id="3V1-59-t6y"/>
@@ -1250,7 +1248,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="JCI-8g-Ieg"/>
-        <segue reference="dYU-iy-fSm"/>
-        <segue reference="LVW-My-Rus"/>
+        <segue reference="9aR-1I-IWD"/>
+        <segue reference="KIx-4V-ldK"/>
     </inferredMetricsTieBreakers>
 </document>

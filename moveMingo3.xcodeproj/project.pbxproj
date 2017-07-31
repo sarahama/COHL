@@ -19,9 +19,6 @@
 		480CFB2B1E21D40800B6592C /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */; };
 		480CFB2D1E21DF3100B6592C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2C1E21DF3100B6592C /* SignUpViewController.swift */; };
 		480CFB2F1E21E2C700B6592C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2E1E21E2C700B6592C /* WelcomeViewController.swift */; };
-		480CFB391E2DC30500B6592C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB371E2DC30500B6592C /* Model.xcdatamodeld */; };
-		480CFB3C1E2DC5A700B6592C /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB3A1E2DC5A700B6592C /* Event+CoreDataProperties.swift */; };
-		480CFB3D1E2DC5A700B6592C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB3B1E2DC5A700B6592C /* Event.swift */; };
 		4811F2A81F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811F2A61F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift */; };
 		4811F2A91F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4811F2A71F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib */; };
 		4811F2AC1F0F267400D98C6A /* OccurringEventDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811F2AA1F0F267200D98C6A /* OccurringEventDetailCell.swift */; };
@@ -86,9 +83,6 @@
 		480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomePageViewController.swift; path = ../WelcomePageViewController.swift; sourceTree = "<group>"; };
 		480CFB2C1E21DF3100B6592C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		480CFB2E1E21E2C700B6592C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		480CFB381E2DC30500B6592C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		480CFB3A1E2DC5A700B6592C /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		480CFB3B1E2DC5A700B6592C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		4811F2A61F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEventDetailCell.swift; sourceTree = "<group>"; };
 		4811F2A71F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpcomingEventDetailCell.xib; sourceTree = "<group>"; };
 		4811F2AA1F0F267200D98C6A /* OccurringEventDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OccurringEventDetailCell.swift; sourceTree = "<group>"; };
@@ -169,36 +163,23 @@
 		480CFAF21E21BECD00B6592C /* moveMingo3 */ = {
 			isa = PBXGroup;
 			children = (
-				4811F2A61F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift */,
-				4811F2A71F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib */,
-				48727EB41EEEEC3A00936EB2 /* TableHeadersNSections */,
+				48AEBAB61F2EBCDB004C719C /* Home */,
+				48AEBAB51F2EBC8E004C719C /* WelcomeLogin */,
+				48AEBAB41F2EBBD2004C719C /* Carpool */,
+				48AEBAB21F2EBBC3004C719C /* Passport */,
+				48AEBAB01F2EBB9B004C719C /* Profile */,
+				48AEBAAE1F2EBB7A004C719C /* Events */,
 				48A768971EA56CC300AAA94D /* moveMingo3.entitlements */,
-				480CFB3E1E2DC66700B6592C /* Core Data */,
 				480CFAF31E21BECD00B6592C /* AppDelegate.swift */,
 				480CFAF71E21BECD00B6592C /* Main.storyboard */,
-				48727EB91EEEF2BA00936EB2 /* ExpandableTableViewController.swift */,
-				482F56331E5D4CD100E18C5C /* CarpoolsViewController.swift */,
-				482F562F1E5D319A00E18C5C /* PassportViewController.swift */,
-				48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */,
-				480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */,
-				48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */,
 				480CFAF51E21BECD00B6592C /* ViewController.swift */,
 				480CFB2E1E21E2C700B6592C /* WelcomeViewController.swift */,
-				480CFB261E21D03C00B6592C /* SignInViewController.swift */,
-				480CFB2C1E21DF3100B6592C /* SignUpViewController.swift */,
 				480CFAFD1E21BECD00B6592C /* Assets.xcassets */,
 				480CFAFF1E21BECD00B6592C /* LaunchScreen.storyboard */,
 				480CFB021E21BECD00B6592C /* Info.plist */,
 				480CFAFA1E21BECD00B6592C /* moveMingo3.xcdatamodeld */,
-				4865E9A11E80D94700E5DF75 /* EventModel.swift */,
-				483680E71F2ADECE00BE2917 /* RewardModel.swift */,
-				4865E9A31E80DCE200E5DF75 /* CalendarModel.swift */,
-				483680E91F2ADFAF00BE2917 /* StoreModel.swift */,
 				4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */,
 				48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */,
-				4811F2AA1F0F267200D98C6A /* OccurringEventDetailCell.swift */,
-				4811F2AB1F0F267300D98C6A /* OccurringEventDetailCell.xib */,
-				483680E31F298D1F00BE2917 /* RewardsViewController.swift */,
 			);
 			path = moveMingo3;
 			sourceTree = "<group>";
@@ -221,24 +202,66 @@
 			path = moveMingo3UITests;
 			sourceTree = "<group>";
 		};
-		480CFB3E1E2DC66700B6592C /* Core Data */ = {
+		48AEBAAE1F2EBB7A004C719C /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				480CFB3A1E2DC5A700B6592C /* Event+CoreDataProperties.swift */,
-				480CFB3B1E2DC5A700B6592C /* Event.swift */,
-				480CFB371E2DC30500B6592C /* Model.xcdatamodeld */,
+				4811F2A61F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift */,
+				4865E9A11E80D94700E5DF75 /* EventModel.swift */,
+				4811F2A71F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib */,
+				4865E9A31E80DCE200E5DF75 /* CalendarModel.swift */,
+				48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */,
+				4811F2AA1F0F267200D98C6A /* OccurringEventDetailCell.swift */,
+				4811F2AB1F0F267300D98C6A /* OccurringEventDetailCell.xib */,
+				48727EB91EEEF2BA00936EB2 /* ExpandableTableViewController.swift */,
 			);
-			name = "Core Data";
+			name = Events;
 			sourceTree = "<group>";
 		};
-		48727EB41EEEEC3A00936EB2 /* TableHeadersNSections */ = {
+		48AEBAB01F2EBB9B004C719C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */,
-				48AEBAAA1F2AE9E8004C719C /* RewardHeaderView.swift */,
-				48AEBAAC1F2E2D27004C719C /* StoreHeaderFooterView.swift */,
+				48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */,
 			);
-			name = TableHeadersNSections;
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		48AEBAB21F2EBBC3004C719C /* Passport */ = {
+			isa = PBXGroup;
+			children = (
+				482F562F1E5D319A00E18C5C /* PassportViewController.swift */,
+				48AEBAAC1F2E2D27004C719C /* StoreHeaderFooterView.swift */,
+				483680E71F2ADECE00BE2917 /* RewardModel.swift */,
+				483680E91F2ADFAF00BE2917 /* StoreModel.swift */,
+				483680E31F298D1F00BE2917 /* RewardsViewController.swift */,
+				48AEBAAA1F2AE9E8004C719C /* RewardHeaderView.swift */,
+			);
+			name = Passport;
+			sourceTree = "<group>";
+		};
+		48AEBAB41F2EBBD2004C719C /* Carpool */ = {
+			isa = PBXGroup;
+			children = (
+				482F56331E5D4CD100E18C5C /* CarpoolsViewController.swift */,
+			);
+			name = Carpool;
+			sourceTree = "<group>";
+		};
+		48AEBAB51F2EBC8E004C719C /* WelcomeLogin */ = {
+			isa = PBXGroup;
+			children = (
+				480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */,
+				480CFB261E21D03C00B6592C /* SignInViewController.swift */,
+				480CFB2C1E21DF3100B6592C /* SignUpViewController.swift */,
+			);
+			name = WelcomeLogin;
+			sourceTree = "<group>";
+		};
+		48AEBAB61F2EBCDB004C719C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		4BD2A4BBD6EC583679EEB2DF /* Pods */ = {
@@ -555,10 +578,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				480CFB3C1E2DC5A700B6592C /* Event+CoreDataProperties.swift in Sources */,
 				4865E9A41E80DCE200E5DF75 /* CalendarModel.swift in Sources */,
 				48AEBAAB1F2AE9E8004C719C /* RewardHeaderView.swift in Sources */,
-				480CFB3D1E2DC5A700B6592C /* Event.swift in Sources */,
 				4865E9A61E8210AF00E5DF75 /* EventTableCell.swift in Sources */,
 				480CFB2D1E21DF3100B6592C /* SignUpViewController.swift in Sources */,
 				480CFB271E21D03C00B6592C /* SignInViewController.swift in Sources */,
@@ -568,7 +589,6 @@
 				48FDE2161E497C2D0088BA9E /* ProfileViewController.swift in Sources */,
 				48727EB81EEEEE3100936EB2 /* ExpandableHeaderView.swift in Sources */,
 				480CFAF41E21BECD00B6592C /* AppDelegate.swift in Sources */,
-				480CFB391E2DC30500B6592C /* Model.xcdatamodeld in Sources */,
 				482F56341E5D4CD100E18C5C /* CarpoolsViewController.swift in Sources */,
 				480CFAFC1E21BECD00B6592C /* moveMingo3.xcdatamodeld in Sources */,
 				4811F2AC1F0F267400D98C6A /* OccurringEventDetailCell.swift in Sources */,
@@ -858,17 +878,6 @@
 			);
 			currentVersion = 480CFAFB1E21BECD00B6592C /* moveMingo3.xcdatamodel */;
 			path = moveMingo3.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		480CFB371E2DC30500B6592C /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				480CFB381E2DC30500B6592C /* Model.xcdatamodel */,
-			);
-			currentVersion = 480CFB381E2DC30500B6592C /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = ../Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

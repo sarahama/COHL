@@ -22,6 +22,7 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
     var eventDate: String!
     var eventTime: String!
     var timeColor: UIColor!
+    var eventCount: String!
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -44,6 +45,14 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         self.eventTitle = event.name!
         self.eventPoints = event.points! + " points"
         self.eventAddress = event.address!
+        
+        if (event.count == "0"){
+            self.eventCount = "Be the first to go!"
+        } else if(event.count == "1"){
+            self.eventCount = event.count! + " person is interested"
+        } else{
+            self.eventCount = event.count! + " people are interested"
+        }
         self.section = section
         self.delegate = delegate
         let originalStartDate = event.start_date?.components(separatedBy: " ")
@@ -121,22 +130,32 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         // add the event points
         let eventPoints = UILabel()
         eventPoints.text = self.eventPoints
-        eventPoints.font = eventPoints.font.withSize(16)
+        eventPoints.font = UIFont(name:"HelveticaNeue-Bold", size: 17.0)
+        eventPoints.textColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
         eventPoints.frame = CGRect(x: 30, y: 40, width: 250, height: 35)
         self.contentView.addSubview(eventPoints)
+        
+        // add the event count
+        let eventCount = UILabel()
+        eventCount.text = self.eventCount
+        eventCount.font = eventCount.font.withSize(14)
+        eventCount.frame = CGRect(x: 30, y: 60, width: 250, height: 35)
+        self.contentView.addSubview(eventCount)
+        
+
         
         // add the event address
         let eventAddress = UILabel()
         eventAddress.text = self.eventAddress
         eventAddress.font = eventAddress.font.withSize(14)
-        eventAddress.frame = CGRect(x: 30, y: 60, width: 250, height: 35)
+        eventAddress.frame = CGRect(x: 30, y: 75, width: 250, height: 35)
         self.contentView.addSubview(eventAddress)
         
         // add the event date
         let eventDate = UILabel()
         eventDate.text = self.eventDate
         eventDate.font = eventDate.font.withSize(14)
-        eventDate.frame = CGRect(x: 30, y: 80, width: 150, height: 35)
+        eventDate.frame = CGRect(x: 30, y: 90, width: 150, height: 35)
         self.contentView.addSubview(eventDate)
         
         // add the event time
@@ -144,7 +163,7 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         eventTime.text = self.eventTime
         eventTime.textColor = self.timeColor
         eventTime.font = eventTime.font.withSize(14)
-        eventTime.frame = CGRect(x: 190, y: 80, width: 100, height: 35)
+        eventTime.frame = CGRect(x: 130, y: 90, width: 150, height: 35)
         self.contentView.addSubview(eventTime)
         
         //self.contentView.addSubview(self.textLabel!)

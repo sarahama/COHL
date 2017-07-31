@@ -79,6 +79,7 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
                     let details:String = jsonElement["Event_Details"] as! String!
                     let event_id:Int = jsonElement["Event_ID"] as! Int!
                     let points:Int = jsonElement["Event_Points"] as! Int!
+                    let count:Int = jsonElement["Count"] as! Int!
                         
                     event.name = name
                     event.details = details
@@ -88,6 +89,7 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
                     event.expanded = false
                     event.event_id = "\(event_id)"
                     event.points = "\(points)"
+                    event.count = "\(count)"
                         
                     
                     events_list.add(event)

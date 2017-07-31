@@ -21,6 +21,7 @@ class EventModel: NSObject {
     var event_id: String?
     var points: String?
     var expanded: Bool?
+    var count: String?
     
     
     //empty constructor
@@ -32,7 +33,7 @@ class EventModel: NSObject {
     
     //construct with @name, @address, @start_date, @end_date, @organization, @color, @details, and @points parameters
     
-    init(name: String, address: String, start_date: String, end_date: String, organization: String, color: String, details: String, event_id: String, points: String) {
+    init(name: String, address: String, start_date: String, end_date: String, organization: String, color: String, details: String, event_id: String, points: String, count: String) {
         
         self.name = name
         self.address = address
@@ -44,6 +45,7 @@ class EventModel: NSObject {
         self.event_id = event_id
         self.points = points
         self.expanded = false
+        self.count = count
         
     }
     

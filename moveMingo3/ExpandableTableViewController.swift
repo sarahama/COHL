@@ -39,6 +39,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
             self.tableTitle.text = "Check In"
         }
         
+        print(event_select_type)
         
         super.viewDidLoad()
         //set delegates and initialize homeModel
@@ -79,7 +80,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     
@@ -89,7 +90,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         print("setting height")
-        if ((feedItems[indexPath.section] as! EventModel).expanded)! {
+        if ((feedItems[indexPath.section] as! EventModel).expanded! && event_select_type != "interested" && event_select_type != "attended") {
             print("finished setting")
             return 250
         } else {

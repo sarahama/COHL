@@ -16,6 +16,7 @@ class PassportViewController: UIViewController {
     @IBOutlet weak var current_points: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var fb_name: UILabel!
+    @IBOutlet weak var interestedButton: UIButton!
     
     let URL_GET_POINTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/passport_points.php"
     
@@ -28,8 +29,20 @@ class PassportViewController: UIViewController {
             getPoints()
         }
         // Do any additional setup after loading the view.
+        interestedButton.addTarget(self, action:#selector(changeEventSelect), for: .touchUpInside)
     }
 
+    // set the event select to attended
+    func changeEventSelect() {
+        event_select_type = "attended"
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let eventViewController = storyBoard.instantiateViewController(withIdentifier: "ExpandableTableViewController") as! ExpandableTableViewController
+        
+        self.present(eventViewController, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
