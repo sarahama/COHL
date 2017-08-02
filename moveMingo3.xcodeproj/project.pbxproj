@@ -17,7 +17,7 @@
 		480CFB171E21BECE00B6592C /* moveMingo3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB161E21BECE00B6592C /* moveMingo3UITests.swift */; };
 		480CFB271E21D03C00B6592C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB261E21D03C00B6592C /* SignInViewController.swift */; };
 		480CFB2B1E21D40800B6592C /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */; };
-		480CFB2D1E21DF3100B6592C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2C1E21DF3100B6592C /* SignUpViewController.swift */; };
+		480CFB2D1E21DF3100B6592C /* SignInWithoutFBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2C1E21DF3100B6592C /* SignInWithoutFBViewController.swift */; };
 		480CFB2F1E21E2C700B6592C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480CFB2E1E21E2C700B6592C /* WelcomeViewController.swift */; };
 		4811F2A81F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4811F2A61F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift */; };
 		4811F2A91F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4811F2A71F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib */; };
@@ -33,6 +33,7 @@
 		4865E9A61E8210AF00E5DF75 /* EventTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */; };
 		48727EB81EEEEE3100936EB2 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */; };
 		48727EBA1EEEF2BA00936EB2 /* ExpandableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48727EB91EEEF2BA00936EB2 /* ExpandableTableViewController.swift */; };
+		487DA9E01F313DEF00DC0270 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DA9DF1F313DEF00DC0270 /* SingUpViewController.swift */; };
 		48AEBAAB1F2AE9E8004C719C /* RewardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AEBAAA1F2AE9E8004C719C /* RewardHeaderView.swift */; };
 		48AEBAAD1F2E2D28004C719C /* StoreHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AEBAAC1F2E2D27004C719C /* StoreHeaderFooterView.swift */; };
 		48C6830C1EC4B89F00B0653C /* EventDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */; };
@@ -81,7 +82,7 @@
 		480CFB181E21BECE00B6592C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		480CFB261E21D03C00B6592C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomePageViewController.swift; path = ../WelcomePageViewController.swift; sourceTree = "<group>"; };
-		480CFB2C1E21DF3100B6592C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		480CFB2C1E21DF3100B6592C /* SignInWithoutFBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithoutFBViewController.swift; sourceTree = "<group>"; };
 		480CFB2E1E21E2C700B6592C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4811F2A61F0F0F7C00D98C6A /* UpcomingEventDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEventDetailCell.swift; sourceTree = "<group>"; };
 		4811F2A71F0F0F7C00D98C6A /* UpcomingEventDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpcomingEventDetailCell.xib; sourceTree = "<group>"; };
@@ -97,6 +98,7 @@
 		4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableCell.swift; sourceTree = "<group>"; };
 		48727EB71EEEEE3100936EB2 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		48727EB91EEEF2BA00936EB2 /* ExpandableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewController.swift; sourceTree = "<group>"; };
+		487DA9DF1F313DEF00DC0270 /* SingUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		48A768971EA56CC300AAA94D /* moveMingo3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = moveMingo3.entitlements; sourceTree = "<group>"; };
 		48AEBAAA1F2AE9E8004C719C /* RewardHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardHeaderView.swift; sourceTree = "<group>"; };
 		48AEBAAC1F2E2D27004C719C /* StoreHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreHeaderFooterView.swift; sourceTree = "<group>"; };
@@ -250,8 +252,9 @@
 			isa = PBXGroup;
 			children = (
 				480CFB2A1E21D40800B6592C /* WelcomePageViewController.swift */,
+				487DA9DF1F313DEF00DC0270 /* SingUpViewController.swift */,
 				480CFB261E21D03C00B6592C /* SignInViewController.swift */,
-				480CFB2C1E21DF3100B6592C /* SignUpViewController.swift */,
+				480CFB2C1E21DF3100B6592C /* SignInWithoutFBViewController.swift */,
 			);
 			name = WelcomeLogin;
 			sourceTree = "<group>";
@@ -581,10 +584,11 @@
 				4865E9A41E80DCE200E5DF75 /* CalendarModel.swift in Sources */,
 				48AEBAAB1F2AE9E8004C719C /* RewardHeaderView.swift in Sources */,
 				4865E9A61E8210AF00E5DF75 /* EventTableCell.swift in Sources */,
-				480CFB2D1E21DF3100B6592C /* SignUpViewController.swift in Sources */,
+				480CFB2D1E21DF3100B6592C /* SignInWithoutFBViewController.swift in Sources */,
 				480CFB271E21D03C00B6592C /* SignInViewController.swift in Sources */,
 				4865E9A21E80D94700E5DF75 /* EventModel.swift in Sources */,
 				48AEBAAD1F2E2D28004C719C /* StoreHeaderFooterView.swift in Sources */,
+				487DA9E01F313DEF00DC0270 /* SingUpViewController.swift in Sources */,
 				480CFAF61E21BECD00B6592C /* ViewController.swift in Sources */,
 				48FDE2161E497C2D0088BA9E /* ProfileViewController.swift in Sources */,
 				48727EB81EEEEE3100936EB2 /* ExpandableHeaderView.swift in Sources */,
