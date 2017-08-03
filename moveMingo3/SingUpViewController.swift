@@ -33,6 +33,7 @@ class SingUpViewController: UIViewController {
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
 
         // Do any additional setup after loading the view.
+        register.addTarget(self, action:#selector(signUpUser), for: .touchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,16 +52,16 @@ class SingUpViewController: UIViewController {
     }
     */
     
-    func create_new_user(select_type: String, name: String, password: String) {
+    //the button action function
+    func signUpUser(sender: UIButton) {
         
+        let select_type = "sign_up_user"
         let requestURL = NSURL(string: URL_CREATE_USER)
         let request = NSMutableURLRequest(url: requestURL! as URL)
         request.httpMethod = "POST"
         
-        var postParameters = "select_type="+select_type
-        if(select_type != "all"){
-            postParameters = "select_type="+select_type+"&name="+name+"&password="+password
-        }
+        let postParameters = "select_type="+select_type+"&email="+email.text!+"&password="+pass.text!+"&confirm_password="+confirm_pass.text!+"&name="+name.text!
+        
         
         //adding the parameters to request body
         request.httpBody = postParameters.data(using: .utf8)!
@@ -78,62 +79,35 @@ class SingUpViewController: UIViewController {
             print(data!)
             print("parsing response...")
             
-//            //parsing the response
-//            do {
-//                //converting response to NSDictionary
-//                var eventJSON: NSDictionary!
-//                eventJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
-//                
-//                
-//                let events_list: NSMutableArray = NSMutableArray()
-//                
-//                var jsonElement: NSDictionary = NSDictionary()
-//                let jsonElements:  NSArray = eventJSON["events"] as! NSArray
-//                
-//                for i in 0...(jsonElements.count-1)
-//                {
-//                    
-//                    jsonElement = jsonElements[i] as! NSDictionary
-//                    
-//                    let event = EventModel()
-//                    
-//                    //the following insures none of the JsonElement values are nil through optional binding
-//                    let name:String = jsonElement["Event_Name"] as! String!
-//                    let address:String = jsonElement["Event_Address"] as! String!
-//                    let start_date:String = jsonElement["Event_Start_Date"] as! String!
-//                    let end_date:String = jsonElement["Event_End_Date"] as! String!
-//                    let details:String = jsonElement["Event_Details"] as! String!
-//                    let event_id:Int = jsonElement["Event_ID"] as! Int!
-//                    let points:Int = jsonElement["Event_Points"] as! Int!
-//                    let count:Int = jsonElement["Count"] as! Int!
-//                    
-//                    event.name = name
-//                    event.details = details
-//                    event.address = address
-//                    event.start_date = start_date
-//                    event.end_date = end_date
-//                    event.expanded = false
-//                    event.event_id = "\(event_id)"
-//                    event.points = "\(points)"
-//                    event.count = "\(count)"
-//                    
-//                    
-//                    events_list.add(event)
-//                    
-//                }
-//                
-//                DispatchQueue.main.async(execute: { () -> Void in
-//                    
-//                    self.delegate.itemsDownloaded(events_list)
-//                    
-//                })
-//                
-//            } catch {
-//                print(error)
-//            }
+            do {
+                //converting response to NSDictionary
+                var userJSON: NSDictionary!
+                userJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
+                
+                if(!(userJSON.value(forKey: "error") as! String == "true")){
+                        
+                    current_user_id = userJSON["user"] as! Int
+                    
+                    print("current user is")
+                    print(current_user_id)
+                    // change the view to the home page
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    
+                    let homeViewController = storyBoard.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController
+                    
+                    self.present(homeViewController, animated: true, completion: nil)
+                    return
+                    
+                }
+                
+                self.errorMessage.text = "*"+(userJSON.value(forKey: "message") as? String)!
+                
+            } catch {
+                //error message in case of invalid credential
+                print("Invalid username or password")
+            }
         }
         task.resume()
-        
     }
 
 
