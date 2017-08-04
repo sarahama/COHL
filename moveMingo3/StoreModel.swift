@@ -70,13 +70,16 @@ class StoreModel: NSObject, URLSessionDataDelegate {
                 
                 let rewards_list: NSMutableArray = NSMutableArray()
                 
-                var jsonElement: NSDictionary = NSDictionary()
-                let jsonElements:  NSArray = rewardJSON["rewards"] as! NSArray
+                var jsonElements: NSArray = NSArray()
                 
-                for i in 0...(jsonElements.count-1)
+                if (rewardJSON["error"] as! String == "false") {
+                    jsonElements = rewardJSON["rewards"] as! NSArray
+                }
+                
+                for json in jsonElements
                 {
                     
-                    jsonElement = jsonElements[i] as! NSDictionary
+                    let jsonElement = json as! NSDictionary
                     
                     let reward = RewardModel()
                     

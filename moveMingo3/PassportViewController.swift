@@ -12,7 +12,7 @@ import FacebookCore
 
 class PassportViewController: UIViewController {
 
-    @IBOutlet weak var total_points: UILabel!
+    //@IBOutlet weak var total_points: UILabel!
     @IBOutlet weak var current_points: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var fb_name: UILabel!
@@ -26,8 +26,9 @@ class PassportViewController: UIViewController {
         if let accessToken = AccessToken.current {
             print(accessToken)
             getFaceBookInfo()
-            getPoints()
         }
+        getPoints()
+        
         // Do any additional setup after loading the view.
         interestedButton.addTarget(self, action:#selector(changeEventSelect), for: .touchUpInside)
     }
@@ -93,7 +94,7 @@ class PassportViewController: UIViewController {
             (data, response, error) in
             
             if error != nil{
-                print("error is \(error)")
+                print("error is \(String(describing: error))")
                 return;
             }
             print(data!)
@@ -128,8 +129,8 @@ class PassportViewController: UIViewController {
                     print(err)
                     print(current)
                     print(total)
-                    self.total_points.text = "\(total!)"
-                    self.current_points.text = "\(current!)" + " PASSPORT POINTS"
+                    //self.total_points.text = "\(total!)"
+                    self.current_points.text = "\(current!)" + " points"
                     
                 }
             } catch {

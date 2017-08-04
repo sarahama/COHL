@@ -16,7 +16,10 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
     @IBOutlet weak var view_interested_events: UIButton!
     
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var current_points: UILabel!
     @IBOutlet weak var profileName: UILabel!
+    
+    let URL_GET_POINTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/passport_points.php"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +64,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
             
             getFaceBookInfo()
         }
+        getPoints()
         // Do any additional setup after loading the view.
     }
     
@@ -134,5 +138,70 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func getPoints() {
+        
+        let requestURL = NSURL(string: URL_GET_POINTS)
+        let request = NSMutableURLRequest(url: requestURL! as URL)
+        request.httpMethod = "POST"
+        
+        let postParameters = "user_id="+"\(current_user_id)"
+        
+        //adding the parameters to request body
+        request.httpBody = postParameters.data(using: .utf8)!
+        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: request as URLRequest){
+            (data, response, error) in
+            
+            if error != nil{
+                print("error is \(String(describing: error))")
+                return;
+            }
+            print(data!)
+            print("parsing response...")
+            //parsing the response
+            do {
+                //converting resonse to NSDictionary
+                
+                let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .  mutableContainers) as? NSDictionary
+                
+                //parsing the json
+                if let parseJSON = myJSON {
+                    
+                    //creating a string
+                    var msg : String!
+                    var err : String!
+                    let current : Int!
+                    let total : Int!
+                    
+                    //getting the json response
+                    msg = parseJSON["message"] as! String?
+                    err = parseJSON["error"] as! String?
+                    
+                    
+                    let pointsJSON = parseJSON["points"] as! NSDictionary
+                    current = pointsJSON["Current_Points"] as! Int
+                    total = pointsJSON["Total_Points"] as! Int
+                    
+                    
+                    //printing the response
+                    print(msg)
+                    print(err)
+                    print(current)
+                    print(total)
+                    self.current_points.text = "\(current!)" + " points"
+                    
+                }
+            } catch {
+                print(error)
+            }
+            
+        }
+        
+        task.resume()
+        
+    }
+
 
 }
