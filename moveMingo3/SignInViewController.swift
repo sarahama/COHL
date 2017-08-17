@@ -75,6 +75,9 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
         if(FBSDKAccessToken.current() != nil)
         {
             if (createNewUser()){
+                // track that they are using facebook
+                using_fb = true
+                
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
                 let homeViewController = storyBoard.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController

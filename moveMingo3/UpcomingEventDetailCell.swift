@@ -14,6 +14,7 @@ class UpcomingEventDetailCell: UITableViewCell {
     
     @IBOutlet weak var peopleGoing: UILabel!
     
+    @IBOutlet weak var points: UILabel!
     @IBOutlet weak var eventDetails: UILabel!
     
     @IBOutlet weak var interested: UIButton!

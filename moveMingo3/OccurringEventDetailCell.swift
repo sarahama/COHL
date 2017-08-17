@@ -14,6 +14,7 @@ class OccurringEventDetailCell: UITableViewCell {
     
     @IBOutlet weak var checkMark: UIImageView!
     
+    @IBOutlet weak var points: UILabel!
     @IBOutlet weak var peopleCheckedIn: UILabel!
     
     @IBOutlet weak var checkIn: UIButton!

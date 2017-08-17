@@ -12,9 +12,10 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var colorStrip: UIImageView!
-    @IBOutlet weak var tableTitle: UILabel!
 
+    @IBOutlet weak var tableTitle: UILabel!
     @IBOutlet weak var fleckStrip: UIImageView!
+
     
     var feedItems: NSArray = NSArray()
     var selectedLocation : EventModel = EventModel()
@@ -132,6 +133,12 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
             
             // add the interested action
             cell.interested.tag = Int(event.event_id!)!
+            cell.points.text = event.points! + " pts"
+            if(Int(event.count!)! > 0) {
+                cell.peopleGoing.text = event.count! + " people interested"
+            } else {
+                cell.peopleGoing.text = "Be the first!"
+            }
             cell.interested.addTarget(self, action:#selector(userIsInterested), for: .touchUpInside)
             
             return cell
@@ -141,12 +148,16 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
             
             // add the check in action to the cell
             cell.checkIn.tag = Int(event.event_id!)!
+            cell.points.text = event.points! + " pts"
+            if(Int(event.count!)! > 0) {
+                cell.peopleCheckedIn.text = event.count! + " people interested"
+            } else {
+                cell.peopleCheckedIn.text = "Be the first!"
+            }
             cell.checkIn.addTarget(self, action:#selector(userIsCheckingIn), for: .touchUpInside)
             
             return cell
         }
-        
-
         
     }
     

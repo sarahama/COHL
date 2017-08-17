@@ -126,6 +126,9 @@ class SignInWithoutFBViewController: UIViewController {
                     
                     let homeViewController = storyBoard.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController
                     
+                    // use the global var to tag they have logged in without fb
+                    using_fb = false
+                    
                     self.present(homeViewController, animated: true, completion: nil)
                     return
                     

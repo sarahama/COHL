@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
     let URL_GET_POINTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/passport_points.php"
     
     override func viewDidLoad() {
+        getPoints()
         super.viewDidLoad()
         
         // set the event select type to interested incase they want to view 
@@ -63,11 +64,39 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
             logoutButton.readPermissions = ["email", "public_profile"]
             
             getFaceBookInfo()
+            
+        } else if(!using_fb)  {
+            // if they aren't using fb, display a different logout button
+            // and pull their name and picture from the db instead of fb
+            let logoutButton2 = UIButton(frame: CGRect(x: self.view.bounds.midX - 50, y: self.view.bounds.maxY - 40, width: 100, height: 25))
+            logoutButton2.backgroundColor = #colorLiteral(red: 0.3668780923, green: 0.5994322896, blue: 0.5997635126, alpha: 1)
+            logoutButton2.setTitle("Logout", for: [])
+            logoutButton2.addTarget(self, action: #selector(nonFBlogout), for: .touchUpInside)
+            
+            self.view.addSubview(logoutButton2)
+
         }
-        getPoints()
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    func nonFBlogout(sender: UIButton) {
+        // reset the current user id and using fb variables
+        current_user_id = -1
+        using_fb = true
+        
+        
+        // redirect to the welcome page
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let welcomeViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! WelcomePageViewController
+        
+        self.present(welcomeViewController, animated: true, completion: nil)
+        return
+    }
+    
+    // function to grab the user's info from facebook
     func getFaceBookInfo(){
         if(FBSDKAccessToken.current() != nil)
         {

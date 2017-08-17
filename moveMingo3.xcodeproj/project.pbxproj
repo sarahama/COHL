@@ -37,6 +37,8 @@
 		48AEBAAB1F2AE9E8004C719C /* RewardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AEBAAA1F2AE9E8004C719C /* RewardHeaderView.swift */; };
 		48AEBAAD1F2E2D28004C719C /* StoreHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AEBAAC1F2E2D27004C719C /* StoreHeaderFooterView.swift */; };
 		48C6830C1EC4B89F00B0653C /* EventDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */; };
+		48D133341F3D3BBB005CA86A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D133331F3D3BBB005CA86A /* SettingsViewController.swift */; };
+		48D133361F3D56D1005CA86A /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D133351F3D56D0005CA86A /* FeedbackViewController.swift */; };
 		48FDE2161E497C2D0088BA9E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */; };
 		48FDE2181E4A2F0B0088BA9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */; };
 		7BBEF5D60AF94A0E7C463453 /* Pods_moveMingo3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3FF32845C98FFE80635325 /* Pods_moveMingo3Tests.framework */; };
@@ -103,6 +105,8 @@
 		48AEBAAA1F2AE9E8004C719C /* RewardHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardHeaderView.swift; sourceTree = "<group>"; };
 		48AEBAAC1F2E2D27004C719C /* StoreHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreHeaderFooterView.swift; sourceTree = "<group>"; };
 		48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		48D133331F3D3BBB005CA86A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		48D133351F3D56D0005CA86A /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		939D80C92DDD900293F10E3B /* Pods-moveMingo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moveMingo3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moveMingo3/Pods-moveMingo3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 		48AEBAB01F2EBB9B004C719C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				48D133351F3D56D0005CA86A /* FeedbackViewController.swift */,
+				48D133331F3D3BBB005CA86A /* SettingsViewController.swift */,
 				48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */,
 			);
 			name = Profile;
@@ -588,6 +594,7 @@
 				480CFB271E21D03C00B6592C /* SignInViewController.swift in Sources */,
 				4865E9A21E80D94700E5DF75 /* EventModel.swift in Sources */,
 				48AEBAAD1F2E2D28004C719C /* StoreHeaderFooterView.swift in Sources */,
+				48D133361F3D56D1005CA86A /* FeedbackViewController.swift in Sources */,
 				487DA9E01F313DEF00DC0270 /* SingUpViewController.swift in Sources */,
 				480CFAF61E21BECD00B6592C /* ViewController.swift in Sources */,
 				48FDE2161E497C2D0088BA9E /* ProfileViewController.swift in Sources */,
@@ -604,6 +611,7 @@
 				480CFB2B1E21D40800B6592C /* WelcomePageViewController.swift in Sources */,
 				48FDE2181E4A2F0B0088BA9E /* HomeViewController.swift in Sources */,
 				483680EA1F2ADFAF00BE2917 /* StoreModel.swift in Sources */,
+				48D133341F3D3BBB005CA86A /* SettingsViewController.swift in Sources */,
 				480CFB2F1E21E2C700B6592C /* WelcomeViewController.swift in Sources */,
 				48C6830C1EC4B89F00B0653C /* EventDetailsTableViewCell.swift in Sources */,
 			);
