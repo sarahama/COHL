@@ -18,6 +18,8 @@ class SingUpViewController: UIViewController {
     
     @IBOutlet weak var pass: UITextField!
     
+    @IBOutlet weak var phone: UITextField!
+    
     @IBOutlet weak var errorMessage: UILabel!
     
     @IBOutlet weak var register: UIButton!
@@ -60,7 +62,7 @@ class SingUpViewController: UIViewController {
         let request = NSMutableURLRequest(url: requestURL! as URL)
         request.httpMethod = "POST"
         
-        let postParameters = "select_type="+select_type+"&email="+email.text!+"&password="+pass.text!+"&confirm_password="+confirm_pass.text!+"&name="+name.text!
+        let postParameters = "select_type="+select_type+"&email="+email.text!+"&password="+pass.text!+"&confirm_password="+confirm_pass.text!+"&name="+name.text!+"&phone="+phone.text!
         
         
         //adding the parameters to request body

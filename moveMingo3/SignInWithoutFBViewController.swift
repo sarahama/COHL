@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import SafariServices
 
 class SignInWithoutFBViewController: UIViewController {
     
     
+    @IBOutlet weak var message: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
     let URL_USER_LOGIN:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_user.php"
+    
+    let URL_RECOVER_PASSWORD:String = "http://Sarahs-MacBook-Pro-2.local/COHL/recover_password.php"
+    
+    @IBOutlet weak var forgotPassword: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var smallMessages: UILabel!
     
@@ -33,8 +39,8 @@ class SignInWithoutFBViewController: UIViewController {
         passText.addTarget(self, action:#selector(self.passTextFieldDidBeginEditing), for: UIControlEvents.editingDidBegin)
 
         loginButton.addTarget(self, action:#selector(signUpUser), for: .touchUpInside)
-        //loginButton.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(self.signUpUser)))
-        //storeTo.addTarget(self, action:#selector(changeView), for: .touchUpInside)
+        
+        forgotPassword.addTarget(self, action:#selector(openRecoverPasswordURL), for: .touchUpInside)
     }
 
 
@@ -132,14 +138,21 @@ class SignInWithoutFBViewController: UIViewController {
                     self.present(homeViewController, animated: true, completion: nil)
                     return
                     
+                } else {
+                    self.message.text = "*Invalid"
                 }
-
                 
             } catch {
                 //error message in case of invalid credential
-                print("Invalid username or password")
+                self.message.text = "*Invalid"
             }
         }
         task.resume()
+    }
+    
+    // function to open safari so the user can change their password
+    func openRecoverPasswordURL(sender:UIButton){
+        let svc = SFSafariViewController(url: NSURL(string: URL_RECOVER_PASSWORD)! as URL)
+        self.present(svc, animated: true, completion: nil)
     }
 }

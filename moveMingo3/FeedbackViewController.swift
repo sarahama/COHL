@@ -20,6 +20,14 @@ class FeedbackViewController: UIViewController {
 
         super.viewDidLoad()
 
+        message.layer.borderWidth = 1.0
+        message.layer.cornerRadius = 8
+        message.layer.borderColor = UIColor.lightGray.cgColor
+        
+        subject.layer.borderWidth = 1.0
+        subject.layer.cornerRadius = 8
+        subject.layer.borderColor = UIColor.lightGray.cgColor
+        
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
         
         // Do any additional setup after loading the view.

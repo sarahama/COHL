@@ -39,6 +39,11 @@
 		48C6830C1EC4B89F00B0653C /* EventDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */; };
 		48D133341F3D3BBB005CA86A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D133331F3D3BBB005CA86A /* SettingsViewController.swift */; };
 		48D133361F3D56D1005CA86A /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D133351F3D56D0005CA86A /* FeedbackViewController.swift */; };
+		48D133381F45369A005CA86A /* CustomInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D133371F453698005CA86A /* CustomInputTextField.swift */; };
+		48D1333A1F468D6F005CA86A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D133391F468D6F005CA86A /* UserModel.swift */; };
+		48D1333C1F468ED7005CA86A /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1333B1F468ED7005CA86A /* AccountModel.swift */; };
+		48D1333E1F4A957D005CA86A /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1333D1F4A957D005CA86A /* FriendsViewController.swift */; };
+		48D133401F4BB3EF005CA86A /* FriendsHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1333F1F4BB3EE005CA86A /* FriendsHeaderFooterView.swift */; };
 		48FDE2161E497C2D0088BA9E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */; };
 		48FDE2181E4A2F0B0088BA9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */; };
 		7BBEF5D60AF94A0E7C463453 /* Pods_moveMingo3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3FF32845C98FFE80635325 /* Pods_moveMingo3Tests.framework */; };
@@ -107,6 +112,11 @@
 		48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		48D133331F3D3BBB005CA86A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		48D133351F3D56D0005CA86A /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		48D133371F453698005CA86A /* CustomInputTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputTextField.swift; sourceTree = "<group>"; };
+		48D133391F468D6F005CA86A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		48D1333B1F468ED7005CA86A /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		48D1333D1F4A957D005CA86A /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		48D1333F1F4BB3EE005CA86A /* FriendsHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsHeaderFooterView.swift; sourceTree = "<group>"; };
 		48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		48FDE2171E4A2F0A0088BA9E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		939D80C92DDD900293F10E3B /* Pods-moveMingo3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moveMingo3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moveMingo3/Pods-moveMingo3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +196,7 @@
 				480CFAFA1E21BECD00B6592C /* moveMingo3.xcdatamodeld */,
 				4865E9A51E8210AF00E5DF75 /* EventTableCell.swift */,
 				48C6830B1EC4B89E00B0653C /* EventDetailsTableViewCell.swift */,
+				48D133371F453698005CA86A /* CustomInputTextField.swift */,
 			);
 			path = moveMingo3;
 			sourceTree = "<group>";
@@ -226,9 +237,13 @@
 		48AEBAB01F2EBB9B004C719C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				48D1333D1F4A957D005CA86A /* FriendsViewController.swift */,
+				48D1333F1F4BB3EE005CA86A /* FriendsHeaderFooterView.swift */,
 				48D133351F3D56D0005CA86A /* FeedbackViewController.swift */,
 				48D133331F3D3BBB005CA86A /* SettingsViewController.swift */,
 				48FDE2151E497C2D0088BA9E /* ProfileViewController.swift */,
+				48D133391F468D6F005CA86A /* UserModel.swift */,
+				48D1333B1F468ED7005CA86A /* AccountModel.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -590,6 +605,7 @@
 				4865E9A41E80DCE200E5DF75 /* CalendarModel.swift in Sources */,
 				48AEBAAB1F2AE9E8004C719C /* RewardHeaderView.swift in Sources */,
 				4865E9A61E8210AF00E5DF75 /* EventTableCell.swift in Sources */,
+				48D1333A1F468D6F005CA86A /* UserModel.swift in Sources */,
 				480CFB2D1E21DF3100B6592C /* SignInWithoutFBViewController.swift in Sources */,
 				480CFB271E21D03C00B6592C /* SignInViewController.swift in Sources */,
 				4865E9A21E80D94700E5DF75 /* EventModel.swift in Sources */,
@@ -608,8 +624,12 @@
 				483680E81F2ADECF00BE2917 /* RewardModel.swift in Sources */,
 				48727EBA1EEEF2BA00936EB2 /* ExpandableTableViewController.swift in Sources */,
 				482F56301E5D319A00E18C5C /* PassportViewController.swift in Sources */,
+				48D133401F4BB3EF005CA86A /* FriendsHeaderFooterView.swift in Sources */,
+				48D133381F45369A005CA86A /* CustomInputTextField.swift in Sources */,
 				480CFB2B1E21D40800B6592C /* WelcomePageViewController.swift in Sources */,
 				48FDE2181E4A2F0B0088BA9E /* HomeViewController.swift in Sources */,
+				48D1333E1F4A957D005CA86A /* FriendsViewController.swift in Sources */,
+				48D1333C1F468ED7005CA86A /* AccountModel.swift in Sources */,
 				483680EA1F2ADFAF00BE2917 /* StoreModel.swift in Sources */,
 				48D133341F3D3BBB005CA86A /* SettingsViewController.swift in Sources */,
 				480CFB2F1E21E2C700B6592C /* WelcomeViewController.swift in Sources */,
