@@ -606,10 +606,9 @@
                     </view>
                     <connections>
                         <outlet property="current_points" destination="BnO-bj-tI2" id="348-tE-o9p"/>
-                        <outlet property="fb_name" destination="h02-yJ-cWV" id="xfm-fa-geI"/>
                         <outlet property="interestedButton" destination="84M-8x-ljq" id="ufZ-Ld-wpq"/>
                         <outlet property="profilePic" destination="VH5-iQ-SEz" id="ch9-DJ-PvK"/>
-                        <outlet property="profile_name" destination="h02-yJ-cWV" id="fHp-wA-5rX"/>
+                        <outlet property="profile_name" destination="h02-yJ-cWV" id="6bY-SY-T8o"/>
                         <outlet property="total_points" destination="xSm-bm-mOe" id="uhV-CV-lik"/>
                     </connections>
                 </viewController>
@@ -1628,8 +1627,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ead-cD-Rr0"/>
-        <segue reference="f7Q-n4-CX2"/>
-        <segue reference="Vfj-Om-dRI"/>
+        <segue reference="8mA-4C-fLu"/>
         <segue reference="LVW-My-Rus"/>
+        <segue reference="dYU-iy-fSm"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,8 +13,8 @@ import FacebookCore
 class PassportViewController: UIViewController, AccountModelProtocal {
 
     //@IBOutlet weak var total_points: UILabel!
-    @IBOutlet weak var total_points: UILabel!
     @IBOutlet weak var profile_name: UILabel!
+    @IBOutlet weak var total_points: UILabel!
     @IBOutlet weak var current_points: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     

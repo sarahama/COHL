@@ -96,9 +96,10 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
             header.customInit(reward: reward, section: section)
             // add the redeem button
             let redeemButton = UIButton(frame: CGRect(x: 165, y: 55, width: 80, height: 40))
-            redeemButton.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
             redeemButton.setTitle("Select", for: [])
+            redeemButton.tintColor = UIColor.black
             redeemButton.tag = Int(reward.reward_id!)
+            redeemButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 13)
             redeemButton.addTarget(self, action: #selector(makePurchase), for: .touchUpInside)
             
             header.addSubview(redeemButton)

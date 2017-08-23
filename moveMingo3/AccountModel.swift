@@ -30,9 +30,14 @@ class AccountModel: NSObject, URLSessionDataDelegate{
     func downloadItems(select_type: String, phone_list: String = "") {
         
         var requestURL = NSURL()
-        
+        var phone_list1 = ""
+        var phone_list2 = ""
         if (select_type == "get_user_info"){
             requestURL = NSURL(string: URL_USER_INFO)!
+        } else if (select_type == "view_unconnected_friends"){
+            phone_list1 = "&phone_list="+phone_list
+            phone_list2 = phone_list1.replacingOccurrences(of: "\\s", with: "-", options: .regularExpression)
+            requestURL = NSURL(string: URL_GET_FRIENDS)!
         } else {
             requestURL = NSURL(string: URL_GET_FRIENDS)!
         }
@@ -41,10 +46,12 @@ class AccountModel: NSObject, URLSessionDataDelegate{
         request.httpMethod = "POST"
         
         
-        let postParameters = "select_type="+select_type+"&user_id="+"\(current_user_id)"
+        let postParameters = "select_type="+select_type+"&user_id="+"\(current_user_id)"+phone_list2
         
         //adding the parameters to request body
         request.httpBody = postParameters.data(using: .utf8)!
+        print("PJHOENSE")
+        print(phone_list2)
         
         //creating a task to send the post request
         let task = URLSession.shared.dataTask(with: request as URLRequest){
