@@ -105,6 +105,12 @@ class AccountModel: NSObject, URLSessionDataDelegate{
                         user.current_points = "\(current_points)"
                         user.profile_path = profile_path
                         user.phone = phone
+                    } else if (select_type == "view_friends") {
+                        // if they are viewing the full list of friends, we need to 
+                        // know which friends are actually pending requests
+                        let responded:Int = element1["Responded"] as! Int
+                        
+                        user.responded = responded
                     }
                     
                     

@@ -20,6 +20,7 @@ class UserModel: NSObject {
     var total_points: String?
     var phone:String?
     var user_id:Int?
+    var responded:Int?
 
     
     
@@ -32,7 +33,7 @@ class UserModel: NSObject {
     
     //construct with @name, @address, @start_date, @end_date, @organization, @color, @details, and @points parameters
     
-    init(name: String, email: String, date_joined: String, profile_path: String, current_points: String, total_points: String, phone: String, user_id: Int) {
+    init(name: String, email: String, date_joined: String, profile_path: String, current_points: String, total_points: String, phone: String, user_id: Int, responded: Int) {
         
         self.name = name
         self.email = email
@@ -42,6 +43,7 @@ class UserModel: NSObject {
         self.total_points = total_points
         self.phone = phone
         self.user_id = user_id
+        self.responded = responded
     }
     
 }
