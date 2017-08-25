@@ -31,17 +31,8 @@ class SettingsViewController: UIViewController, AccountModelProtocal {
         
         // let them know if they are a facebook user, their profile info and account info
         // all comes from FB, they cannot change anything through settings
-        if (FBSDKAccessToken.current() != nil ) {
-            // notify them there are no settings they can change
-            let message = UILabel()
-            message.text = "All settings are imported through Facebook. If you would like to change your personal info, it must be changed on Facebook."
-            message.textColor = UIColor.black
-            message.font = message.font.withSize(14)
-            message.numberOfLines = 4
-            message.frame = CGRect(x: 30, y: 300, width: self.view.bounds.size.width - 60 , height: 100)
-            self.view.addSubview(message)
-            
-        } else {
+        if (FBSDKAccessToken.current() == nil ) {
+
             // if they're not a facebook user display their setting options
             let accountModel = AccountModel()
             accountModel.delegate = self
@@ -78,38 +69,40 @@ class SettingsViewController: UIViewController, AccountModelProtocal {
             email.frame = CGRect(x: 30, y: 260, width: self.view.bounds.size.width - 60 , height: 30)
             
             self.view.addSubview(email)
-            
+        }
+        
+        // if they are a facebook user, they can add their phone number
+        // to connect with other users
             // phone
             
-            phone_label.frame = CGRect(x: 30, y: 295, width: self.view.bounds.size.width - 60 , height: 20)
-            phone_label.text = "phone"
-            phone_label.textColor = UIColor.lightGray
+        phone_label.frame = CGRect(x: 30, y: 295, width: self.view.bounds.size.width - 60 , height: 20)
+        phone_label.text = "phone"
+        phone_label.textColor = UIColor.lightGray
             
-            self.view.addSubview(phone_label)
+        self.view.addSubview(phone_label)
             
-            phone.layer.borderWidth = 1.0
-            phone.layer.cornerRadius = 3
-            phone.layer.borderColor =  UIColor.lightGray.cgColor
-            phone.frame = CGRect(x: 30, y: 320, width: self.view.bounds.size.width - 60 , height: 30)
+        phone.layer.borderWidth = 1.0
+        phone.layer.cornerRadius = 3
+        phone.layer.borderColor =  UIColor.lightGray.cgColor
+        phone.frame = CGRect(x: 30, y: 320, width: self.view.bounds.size.width - 60 , height: 30)
             
-            self.view.addSubview(phone)
+        self.view.addSubview(phone)
             
-            // space to show feedback if they gave invalid input
-            //let errorMessage = UILabel()
-            errorMessage.textColor = UIColor.red
-            errorMessage.frame = CGRect(x: 30, y: 380, width: self.view.bounds.size.width - 60 , height: 40)
-            errorMessage.text = ""
-            self.view.addSubview(errorMessage)
+        // space to show feedback if they gave invalid input
+        //let errorMessage = UILabel()
+        errorMessage.textColor = UIColor.red
+        errorMessage.frame = CGRect(x: 30, y: 380, width: self.view.bounds.size.width - 60 , height: 40)
+        errorMessage.text = ""
+        self.view.addSubview(errorMessage)
             
-            // button to save changes
-            let update = UIButton()
-            update.setTitle("Save Changes", for: [])
-            update.backgroundColor = #colorLiteral(red: 0.3668780923, green: 0.5994322896, blue: 0.5997635126, alpha: 1)
-            update.frame = CGRect(x: 30, y: self.view.bounds.size.height - 80, width: self.view.bounds.size.width - 60 , height: 40)
-            self.view.addSubview(update)
+        // button to save changes
+        let update = UIButton()
+        update.setTitle("Save Changes", for: [])
+        update.backgroundColor = #colorLiteral(red: 0.3668780923, green: 0.5994322896, blue: 0.5997635126, alpha: 1)
+        update.frame = CGRect(x: 30, y: self.view.bounds.size.height - 80, width: self.view.bounds.size.width - 60 , height: 40)
+        self.view.addSubview(update)
             
-            update.addTarget(self, action:#selector(updateUserSettings), for: .touchUpInside)
-        }
+        update.addTarget(self, action:#selector(updateUserSettings), for: .touchUpInside)
         
     }
     
