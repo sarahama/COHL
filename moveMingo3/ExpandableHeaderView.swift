@@ -59,7 +59,7 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         let originalEndDate = event.end_date?.components(separatedBy: " ")
         
         let startDate = originalStartDate?[0]
-        let startTime = originalStartDate?[1]
+        let stconfigartTime = originalStartDate?[1]
         
         let endDate = originalEndDate?[0]
         let endTime = originalEndDate?[1]

@@ -13,7 +13,7 @@ class WelcomePageViewController: UIPageViewController {
     
     
     //URL to our web service
-    let URL_CREATE_USER:String = "http://Sarahs-MacBook-Pro-2.local/COHL/create_new_user.php"
+    let URL_CREATE_USER:String = "http://apps.healthyinthehills.com/create_new_user.php"
     
     var fb_name: String!
     var fb_id: String!

@@ -21,9 +21,9 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
     var selectedEvent: EventModel!
     var selectedEventAddress: String!
     
-    let URL_CREATE_INTEREST:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_interests.php"
+    let URL_CREATE_INTEREST:String = "http://apps.healthyinthehills.com/manage_interests.php"
     
-    let URL_CHECK_IN:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_attendance.php"
+    let URL_CHECK_IN:String = "http://apps.healthyinthehills.com/manage_attendance.php"
     
     
     override func viewDidLoad() {

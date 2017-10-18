@@ -22,7 +22,7 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     var storeOpen: Bool!
     var viewStore: Bool!
     
-    let URL_GET_STORE:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_store.php"
+    let URL_GET_STORE:String = "http://apps.healthyinthehills.com/manage_store.php"
 
     
     

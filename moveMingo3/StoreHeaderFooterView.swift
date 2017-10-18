@@ -17,7 +17,7 @@ class StoreHeaderFooterView: UITableViewHeaderFooterView {
     var rewardStock: String!
     var reward_id: Int!
     
-    let URL_GET_STORE:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_store.php"
+    let URL_GET_STORE:String = "http://apps.healthyinthehills.com/manage_store.php"
     
     //    override init(reuseIdentifier: String?) {
     //        super.init(reuseIdentifier: reuseIdentifier)

@@ -22,7 +22,7 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
 
     //this will be changed to the path on WH&W's server
     //let urlPath: String =
-    let URL_GET_UPCOMING_EVENTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_events.php"
+    let URL_GET_UPCOMING_EVENTS:String = "http://apps.healthyinthehills.com/manage_events.php"
     
 
     func downloadItems(select_type: String) {

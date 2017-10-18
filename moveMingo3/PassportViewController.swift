@@ -18,7 +18,7 @@ class PassportViewController: UIViewController {
     @IBOutlet weak var fb_name: UILabel!
     @IBOutlet weak var interestedButton: UIButton!
     
-    let URL_GET_POINTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/passport_points.php"
+    let URL_GET_POINTS:String = "http://apps.healthyinthehills.com/passport_points.php"
     
     override func viewDidLoad() {
         super.viewDidLoad()
