@@ -61,26 +61,26 @@ class CalendarModel: NSObject, URLSessionDataDelegate{
                 
                 let events_list: NSMutableArray = NSMutableArray()
                
-                var jsonElement: NSDictionary = NSDictionary()
+            
                 let jsonElements:  NSArray = eventJSON["events"] as! NSArray
                 
-                for i in 0...(jsonElements.count-1)
+                
+                for element in jsonElements
                 {
-                    
-                    jsonElement = jsonElements[i] as! NSDictionary
+                    let element1 = element as! NSDictionary
                     
                     let event = EventModel()
                     
                     //the following insures none of the JsonElement values are nil through optional binding
-                    let name:String = jsonElement["Event_Name"] as! String!
-                    let address:String = jsonElement["Event_Address"] as! String!
-                    let start_date:String = jsonElement["Event_Start_Date"] as! String!
-                    let end_date:String = jsonElement["Event_End_Date"] as! String!
-                    let details:String = jsonElement["Event_Details"] as! String!
-                    let event_id:Int = jsonElement["Event_ID"] as! Int!
-                    let points:Int = jsonElement["Event_Points"] as! Int!
-                    let count:Int = jsonElement["Count"] as! Int!
-                        
+                    let name:String = element1["Event_Name"] as! String!
+                    let address:String = element1["Event_Address"] as! String!
+                    let start_date:String = element1["Event_Start_Date"] as! String!
+                    let end_date:String = element1["Event_End_Date"] as! String!
+                    let details:String = element1["Event_Details"] as! String!
+                    let event_id:Int = element1["Event_ID"] as! Int!
+                    let points:Int = element1["Event_Points"] as! Int!
+                    let count:Int = element1["Count"] as! Int!
+                    
                     event.name = name
                     event.details = details
                     event.address = address

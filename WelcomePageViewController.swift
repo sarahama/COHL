@@ -35,10 +35,11 @@ class WelcomePageViewController: UIPageViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // super.viewDidAppear()
         
         // if the user is already logged in redirect them to the home page
         // and set the current user id
+        
+        // check if they are logged in with fb
         if FBSDKAccessToken.current() != nil {
             print("user is already logged in")
             // should properly set the current user id
@@ -50,6 +51,17 @@ class WelcomePageViewController: UIPageViewController {
             self.present(homeViewController, animated: true, completion: nil)
             return
             
+        }
+        
+        // check if they are logged in without fb
+        if(!using_fb && current_user_id > -1) {
+            //redirect them to the home page
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            
+            let homeViewController = storyBoard.instantiateViewController(withIdentifier: "homeViewController") as! HomeViewController
+            
+            self.present(homeViewController, animated: true, completion: nil)
+            return
         }
     }
     

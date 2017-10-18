@@ -12,6 +12,7 @@ import CoreData
 import FBSDKCoreKit
 
 var current_user_id = -1
+var using_fb = true
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

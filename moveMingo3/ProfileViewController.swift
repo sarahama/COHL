@@ -10,15 +10,20 @@ import UIKit
 import FBSDKLoginKit
 import FacebookCore
 
-class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
+class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate, AccountModelProtocal{
 
 
     @IBOutlet weak var view_interested_events: UIButton!
     
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var current_points: UILabel!
     @IBOutlet weak var profileName: UILabel!
     
+    var user_account = UserModel()
+    let URL_GET_POINTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/passport_points.php"
+    
     override func viewDidLoad() {
+
         super.viewDidLoad()
         
         // set the event select type to interested incase they want to view 
@@ -26,6 +31,8 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
         event_select_type = "interested"
         
         if let accessToken = AccessToken.current {
+            // just get the user's points, their other info comes from fb
+            getPoints()
             print(accessToken)
             
             let logoutButton = FBSDKLoginButton()
@@ -60,10 +67,58 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
             logoutButton.readPermissions = ["email", "public_profile"]
             
             getFaceBookInfo()
+            
+            
+        } else if(!using_fb)  {
+            // if they aren't using fb, display a different logout button
+            // and pull their name and picture from the db instead of fb
+            // if they're not a facebook user display their setting options
+            let accountModel = AccountModel()
+            accountModel.delegate = self
+            accountModel.downloadItems(select_type: "get_user_info")
+            
+            let logoutButton2 = UIButton(frame: CGRect(x: self.view.bounds.midX - 50, y: self.view.bounds.maxY - 40, width: 100, height: 25))
+            logoutButton2.backgroundColor = #colorLiteral(red: 0.3668780923, green: 0.5994322896, blue: 0.5997635126, alpha: 1)
+            logoutButton2.setTitle("Logout", for: [])
+            logoutButton2.addTarget(self, action: #selector(nonFBlogout), for: .touchUpInside)
+            
+            self.view.addSubview(logoutButton2)
+
         }
         // Do any additional setup after loading the view.
     }
     
+    // this gets user info
+    func userItemsDownloaded(_ users: NSArray) {
+        
+        var user_account = UserModel()
+        for user in users{
+            user_account = user as! UserModel
+        }
+        print(user_account.name ?? "hi")
+        profileName.text = user_account.name
+        current_points.text = user_account.current_points! + " points"
+        self.profilePic.image = #imageLiteral(resourceName: "tealAdd")
+        
+    }
+    
+    
+    func nonFBlogout(sender: UIButton) {
+        // reset the current user id and using fb variables
+        current_user_id = -1
+        using_fb = true
+        
+        
+        // redirect to the welcome page
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+        let welcomeViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! WelcomePageViewController
+        
+        self.present(welcomeViewController, animated: true, completion: nil)
+        return
+    }
+    
+    // function to grab the user's info from facebook
     func getFaceBookInfo(){
         if(FBSDKAccessToken.current() != nil)
         {
@@ -134,5 +189,71 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate{
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func getPoints() {
+        
+        let requestURL = NSURL(string: URL_GET_POINTS)
+        let request = NSMutableURLRequest(url: requestURL! as URL)
+        request.httpMethod = "POST"
+        
+        let postParameters = "user_id="+"\(current_user_id)"
+        print(postParameters)
+        
+        //adding the parameters to request body
+        request.httpBody = postParameters.data(using: .utf8)!
+        
+        //creating a task to send the post request
+        let task = URLSession.shared.dataTask(with: request as URLRequest){
+            (data, response, error) in
+            
+            if error != nil{
+                print("error is \(String(describing: error))")
+                return;
+            }
+            print(data!)
+            print("parsing response...")
+            //parsing the response
+            do {
+                //converting resonse to NSDictionary
+                
+                let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .  mutableContainers) as? NSDictionary
+                
+                print(myJSON)
+                //parsing the json
+                if let parseJSON = myJSON {
+                    
+                    //creating a string
+                    var msg : String!
+                    var err : String!
+                    let current : Int!
+                    let total : Int!
+                    
+                    //getting the json response
+                    msg = parseJSON["message"] as! String?
+                    err = parseJSON["error"] as! String?
+                    
+                    if (!(err == "true")) {
+                        let pointsJSON = parseJSON["points"] as! NSDictionary
+                        current = pointsJSON["Current_Points"] as! Int
+                        total = pointsJSON["Total_Points"] as! Int
+                        print(total)
+                        self.current_points.text = "\(current!)" + " points"
+                    } else {
+                        print(msg)
+                    }
+                    
+                    //printing the response
+                    
+                }
+            } catch {
+                print(error)
+            }
+            
+        }
+        
+        task.resume()
+        
+    }
+
 
 }

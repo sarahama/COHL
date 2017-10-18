@@ -10,13 +10,16 @@ import UIKit
 import FBSDKLoginKit
 import FacebookCore
 
-class PassportViewController: UIViewController {
+class PassportViewController: UIViewController, AccountModelProtocal {
 
+    //@IBOutlet weak var total_points: UILabel!
+    @IBOutlet weak var profile_name: UILabel!
     @IBOutlet weak var total_points: UILabel!
     @IBOutlet weak var current_points: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
-    @IBOutlet weak var fb_name: UILabel!
+    
     @IBOutlet weak var interestedButton: UIButton!
+    var user_account = UserModel()
     
     let URL_GET_POINTS:String = "http://apps.healthyinthehills.com/passport_points.php"
     
@@ -27,10 +30,31 @@ class PassportViewController: UIViewController {
             print(accessToken)
             getFaceBookInfo()
             getPoints()
+        } else {
+        
+            let accountModel = AccountModel()
+            accountModel.delegate = self
+            accountModel.downloadItems(select_type: "get_user_info")
         }
         // Do any additional setup after loading the view.
         interestedButton.addTarget(self, action:#selector(changeEventSelect), for: .touchUpInside)
     }
+    
+    // retrieves non fb user info
+    func userItemsDownloaded(_ users: NSArray) {
+        
+        var user_account = UserModel()
+        for user in users{
+            user_account = user as! UserModel
+        }
+        print(user_account.name ?? "hi")
+        profile_name.text = user_account.name
+        current_points.text = user_account.current_points! + " points"
+        total_points.text = user_account.total_points
+        self.profilePic.image = #imageLiteral(resourceName: "tealAdd")
+        
+    }
+    
 
     // set the event select to attended
     func changeEventSelect() {
@@ -65,7 +89,7 @@ class PassportViewController: UIViewController {
                 let name = data["name"] as? String
                 print("user's name is")
                 print(name!)
-                self.fb_name.text = name
+                self.profile_name.text = name
                 
                 let FBid = data["id"] as? String
                 
@@ -93,7 +117,7 @@ class PassportViewController: UIViewController {
             (data, response, error) in
             
             if error != nil{
-                print("error is \(error)")
+                print("error is \(String(describing: error))")
                 return;
             }
             print(data!)
@@ -128,8 +152,9 @@ class PassportViewController: UIViewController {
                     print(err)
                     print(current)
                     print(total)
+                    //self.total_points.text = "\(total!)"
+                    self.current_points.text = "\(current!)" + " points"
                     self.total_points.text = "\(total!)"
-                    self.current_points.text = "\(current!)" + " PASSPORT POINTS"
                     
                 }
             } catch {

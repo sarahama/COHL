@@ -95,7 +95,7 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         
         // format the times
         let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "h:mm:ss"
+        timeFormatter.dateFormat = "h:mm a"
 
         
         let timeStartTime = dateFormatter.date(from: startDate!)
@@ -127,43 +127,45 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         eventTitle.frame = CGRect(x: 30, y: 20, width: 250, height: 35)
         self.contentView.addSubview(eventTitle)
         
-        // add the event points
-        let eventPoints = UILabel()
-        eventPoints.text = self.eventPoints
-        eventPoints.font = UIFont(name:"HelveticaNeue-Bold", size: 17.0)
-        eventPoints.textColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
-        eventPoints.frame = CGRect(x: 30, y: 40, width: 250, height: 35)
-        self.contentView.addSubview(eventPoints)
-        
-        // add the event count
-        let eventCount = UILabel()
-        eventCount.text = self.eventCount
-        eventCount.font = eventCount.font.withSize(14)
-        eventCount.frame = CGRect(x: 30, y: 60, width: 250, height: 35)
-        self.contentView.addSubview(eventCount)
-        
 
         
         // add the event address
         let eventAddress = UILabel()
         eventAddress.text = self.eventAddress
         eventAddress.font = eventAddress.font.withSize(14)
-        eventAddress.frame = CGRect(x: 30, y: 75, width: 250, height: 35)
+        eventAddress.frame = CGRect(x: 30, y: 40, width: 250, height: 35)
         self.contentView.addSubview(eventAddress)
         
         // add the event date
-        let eventDate = UILabel()
-        eventDate.text = self.eventDate
-        eventDate.font = eventDate.font.withSize(14)
-        eventDate.frame = CGRect(x: 30, y: 90, width: 150, height: 35)
-        self.contentView.addSubview(eventDate)
+        let eventDate1 = UILabel()
+        
+        if ((self.eventDate) != nil) {
+            // if date is not nil, change the format
+            let dateFormatter1 = DateFormatter()
+            dateFormatter1.dateFormat = "yyyy-MM-dd"
+            
+            let dateFormatter2 = DateFormatter()
+            dateFormatter2.dateFormat = "MMMM dd, yyyy"
+            let dateStartDate = dateFormatter1.date(from: self.eventDate!)
+            
+            // assume events are only one day long
+            let newDate = dateFormatter2.string(from: dateStartDate!)
+            eventDate1.text = newDate
+            
+        } else {
+            eventDate1.text = ""
+        }
+        
+        eventDate1.font = eventDate1.font.withSize(14)
+        eventDate1.frame = CGRect(x: 30, y: 60, width: self.bounds.size.width - 60 , height: 35)
+        self.contentView.addSubview(eventDate1)
         
         // add the event time
         let eventTime = UILabel()
         eventTime.text = self.eventTime
         eventTime.textColor = self.timeColor
         eventTime.font = eventTime.font.withSize(14)
-        eventTime.frame = CGRect(x: 130, y: 90, width: 150, height: 35)
+        eventTime.frame = CGRect(x: 30, y: 90, width: self.bounds.size.width - 60 , height: 35)
         self.contentView.addSubview(eventTime)
         
         //self.contentView.addSubview(self.textLabel!)
