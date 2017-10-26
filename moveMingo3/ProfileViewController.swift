@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate, Account
     @IBOutlet weak var profileName: UILabel!
     
     var user_account = UserModel()
-    let URL_GET_POINTS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/passport_points.php"
+    let URL_GET_POINTS:String = "http://apps.healthyinthehills.com/passport_points.php"
     
     override func viewDidLoad() {
 

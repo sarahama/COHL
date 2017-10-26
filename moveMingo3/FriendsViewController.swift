@@ -29,7 +29,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     
-    let URL_GET_FRIENDS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_friends.php"
+    let URL_GET_FRIENDS:String = "http://apps.healthyinthehills.com/manage_friends.php"
     
     
     override func viewDidLoad() {

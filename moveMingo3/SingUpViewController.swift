@@ -27,7 +27,7 @@ class SingUpViewController: UIViewController {
     @IBOutlet weak var confirm_pass: UITextField!
     //this will be changed to the path on WH&W's server
     //let urlPath: String =
-    let URL_CREATE_USER:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_user.php"
+    let URL_CREATE_USER:String = "http://apps.healthyinthehills.com/manage_user.php"
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -12,7 +12,7 @@ import FBSDKLoginKit
 class SettingsViewController: UIViewController, AccountModelProtocal {
 
     var user_account = UserModel()
-    let URL_UPDATE_USER:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_user.php"
+    let URL_UPDATE_USER:String = "http://apps.healthyinthehills.com/manage_user.php"
     let name = UITextField()
     let name_label = UILabel()
     let email = UITextField()

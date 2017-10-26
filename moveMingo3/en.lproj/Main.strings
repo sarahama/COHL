@@ -1,0 +1,174 @@
+
+/* Class = "UIButton"; normalTitle = "PROFILE"; ObjectID = "0EL-7A-GOG"; */
+"0EL-7A-GOG.normalTitle" = "PROFILE";
+
+/* Class = "UILabel"; text = "PROFILE"; ObjectID = "1XP-yR-hHi"; */
+"1XP-yR-hHi.text" = "PROFILE";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "2fy-xI-TmZ"; */
+"2fy-xI-TmZ.normalTitle" = "Sign Up";
+
+/* Class = "UILabel"; text = "FEEDBACK"; ObjectID = "3FY-dX-hzJ"; */
+"3FY-dX-hzJ.text" = "FEEDBACK";
+
+/* Class = "UILabel"; text = "Redeem Passport Points and"; ObjectID = "3It-Oo-NsS"; */
+"3It-Oo-NsS.text" = "Redeem Passport Points and";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "3jD-bD-cJ0"; */
+"3jD-bD-cJ0.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "email *"; ObjectID = "4cJ-CT-1LA"; */
+"4cJ-CT-1LA.text" = "email *";
+
+/* Class = "UIButton"; normalTitle = "FEEDBACK"; ObjectID = "6E9-Yx-R3i"; */
+"6E9-Yx-R3i.normalTitle" = "FEEDBACK";
+
+/* Class = "UILabel"; text = "SETTINGS"; ObjectID = "7X2-9D-qhN"; */
+"7X2-9D-qhN.text" = "SETTINGS";
+
+/* Class = "UIButton"; normalTitle = "EVENTS ATTENDED"; ObjectID = "84M-8x-ljq"; */
+"84M-8x-ljq.normalTitle" = "EVENTS ATTENDED";
+
+/* Class = "UIButton"; normalTitle = "Redeem Points Now"; ObjectID = "86a-PM-5Gg"; */
+"86a-PM-5Gg.normalTitle" = "Redeem Points Now";
+
+/* Class = "UIButton"; normalTitle = "CHECK IN"; ObjectID = "8XW-vA-ICH"; */
+"8XW-vA-ICH.normalTitle" = "CHECK IN";
+
+/* Class = "UILabel"; text = "Check into an event to earn Passport Points"; ObjectID = "8k0-F7-QXt"; */
+"8k0-F7-QXt.text" = "Check into an event to earn Passport Points";
+
+/* Class = "UIButton"; normalTitle = "forgot password?"; ObjectID = "A8B-sL-flP"; */
+"A8B-sL-flP.normalTitle" = "forgot password?";
+
+/* Class = "UIViewController"; title = "SignUp"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "SignUp";
+
+/* Class = "UILabel"; text = "points"; ObjectID = "BnO-bj-tI2"; */
+"BnO-bj-tI2.text" = "points";
+
+/* Class = "UITextView"; text = "Share your feedback ..."; ObjectID = "Caa-6x-oyp"; */
+"Caa-6x-oyp.text" = "Share your feedback ...";
+
+/* Class = "UINavigationItem"; title = "Movies"; ObjectID = "G5N-8u-QDa"; */
+"G5N-8u-QDa.title" = "Movies";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "IVd-ym-wa8"; */
+"IVd-ym-wa8.placeholder" = "password";
+
+/* Class = "UILabel"; text = "Send WHW your thoughts & ideas"; ObjectID = "JYN-Lq-S8y"; */
+"JYN-Lq-S8y.text" = "Send WHW your thoughts & ideas";
+
+/* Class = "UILabel"; text = "phone"; ObjectID = "Jt6-7k-ruk"; */
+"Jt6-7k-ruk.text" = "phone";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "KND-e8-FaM"; */
+"KND-e8-FaM.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "PASSPORT"; ObjectID = "MDa-yv-Fb5"; */
+"MDa-yv-Fb5.normalTitle" = "PASSPORT";
+
+/* Class = "UIViewController"; title = "Welcome"; ObjectID = "Mqq-Vs-tiy"; */
+"Mqq-Vs-tiy.title" = "Welcome";
+
+/* Class = "UIButton"; normalTitle = "Find Friends"; ObjectID = "Nzf-Pr-B1M"; */
+"Nzf-Pr-B1M.normalTitle" = "Find Friends";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "P1i-hO-OAE"; */
+"P1i-hO-OAE.text" = "Sign In";
+
+/* Class = "UILabel"; text = "points"; ObjectID = "Qaf-gH-g0s"; */
+"Qaf-gH-g0s.text" = "points";
+
+/* Class = "UIViewController"; title = "SignIn"; ObjectID = "SrO-cI-1Ih"; */
+"SrO-cI-1Ih.title" = "SignIn";
+
+/* Class = "UILabel"; text = "MY FRIENDS"; ObjectID = "TWR-2N-Pav"; */
+"TWR-2N-Pav.text" = "MY FRIENDS";
+
+/* Class = "UILabel"; text = "confirm password *"; ObjectID = "Vce-Ag-9Bs"; */
+"Vce-Ag-9Bs.text" = "confirm password *";
+
+/* Class = "UILabel"; text = "name *"; ObjectID = "Vn6-iT-oeK"; */
+"Vn6-iT-oeK.text" = "name *";
+
+/* Class = "UILabel"; text = "Welcome"; ObjectID = "Wlr-2w-7rI"; */
+"Wlr-2w-7rI.text" = "Welcome";
+
+/* Class = "UIButton"; normalTitle = "INTERESTED EVENTS"; ObjectID = "Y2P-Z2-U7b"; */
+"Y2P-Z2-U7b.normalTitle" = "INTERESTED EVENTS";
+
+/* Class = "UILabel"; text = "by using Bluetooth and the event code"; ObjectID = "Yi0-Ws-t2A"; */
+"Yi0-Ws-t2A.text" = "by using Bluetooth and the event code";
+
+/* Class = "UILabel"; text = "EVENTS"; ObjectID = "ZZ1-5w-wTg"; */
+"ZZ1-5w-wTg.text" = "EVENTS";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "aKr-bJ-w23"; */
+"aKr-bJ-w23.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "WHW"; ObjectID = "bsa-2l-uQO"; */
+"bsa-2l-uQO.text" = "WHW";
+
+/* Class = "UILabel"; text = "Sign in with"; ObjectID = "ceP-FV-EcO"; */
+"ceP-FV-EcO.text" = "Sign in with";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "e9Z-Os-pn6"; */
+"e9Z-Os-pn6.normalTitle" = "Register";
+
+/* Class = "UITextField"; placeholder = "email"; ObjectID = "fmv-iQ-7N4"; */
+"fmv-iQ-7N4.placeholder" = "email";
+
+/* Class = "UIButton"; normalTitle = "WHW"; ObjectID = "fwJ-Mi-6oA"; */
+"fwJ-Mi-6oA.normalTitle" = "WHW";
+
+/* Class = "UILabel"; text = "PASSPORT"; ObjectID = "gHH-DV-0mZ"; */
+"gHH-DV-0mZ.text" = "PASSPORT";
+
+/* Class = "UIPageViewController"; title = "Login"; ObjectID = "gXg-Ls-VUj"; */
+"gXg-Ls-VUj.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "i4b-S2-6Yz"; */
+"i4b-S2-6Yz.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "FACEBOOK"; ObjectID = "kfN-Np-5mU"; */
+"kfN-Np-5mU.text" = "FACEBOOK";
+
+/* Class = "UIButton"; normalTitle = "FRIENDS"; ObjectID = "lB0-gE-dRs"; */
+"lB0-gE-dRs.normalTitle" = "FRIENDS";
+
+/* Class = "UIButton"; normalTitle = "EVENTS"; ObjectID = "lgC-kG-65w"; */
+"lgC-kG-65w.normalTitle" = "EVENTS";
+
+/* Class = "UILabel"; text = "Subject"; ObjectID = "mqq-cv-y1z"; */
+"mqq-cv-y1z.text" = "Subject";
+
+/* Class = "UILabel"; text = "Sign Up"; ObjectID = "msX-yT-zh9"; */
+"msX-yT-zh9.text" = "Sign Up";
+
+/* Class = "UILabel"; text = "Williamson Health & Wellness"; ObjectID = "nyM-DO-4gB"; */
+"nyM-DO-4gB.text" = "Williamson Health & Wellness";
+
+/* Class = "UIButton"; normalTitle = "REWARDS"; ObjectID = "oLQ-Xu-wtA"; */
+"oLQ-Xu-wtA.normalTitle" = "REWARDS";
+
+/* Class = "UILabel"; text = "password *"; ObjectID = "rrB-Xq-Kl2"; */
+"rrB-Xq-Kl2.text" = "password *";
+
+/* Class = "UILabel"; text = "All Time Passport Points"; ObjectID = "sLy-qH-YfQ"; */
+"sLy-qH-YfQ.text" = "All Time Passport Points";
+
+/* Class = "UILabel"; text = "view previous rewards"; ObjectID = "tQA-pO-CkQ"; */
+"tQA-pO-CkQ.text" = "view previous rewards";
+
+/* Class = "UILabel"; text = "MY REWARDS"; ObjectID = "wBt-Rf-il0"; */
+"wBt-Rf-il0.text" = "MY REWARDS";
+
+/* Class = "UIButton"; normalTitle = "SETTINGS"; ObjectID = "wOB-pA-Y46"; */
+"wOB-pA-Y46.normalTitle" = "SETTINGS";
+
+/* Class = "UIViewController"; title = "My Profile"; ObjectID = "xEC-OJ-PO6"; */
+"xEC-OJ-PO6.title" = "My Profile";
+
+/* Class = "UILabel"; text = "earned"; ObjectID = "xSm-bm-mOe"; */
+"xSm-bm-mOe.text" = "earned";

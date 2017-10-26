@@ -14,7 +14,7 @@ class FeedbackViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var message: UITextView!
     
-    let URL_CREATE_FEEDBACK:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_feedback.php"
+    let URL_CREATE_FEEDBACK:String = "http://apps.healthyinthehills.com/manage_feedback.php"
     
     override func viewDidLoad() {
 

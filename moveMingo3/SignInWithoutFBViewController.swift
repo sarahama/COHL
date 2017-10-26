@@ -15,9 +15,9 @@ class SignInWithoutFBViewController: UIViewController {
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
-    let URL_USER_LOGIN:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_user.php"
+    let URL_USER_LOGIN:String = "http://apps.healthyinthehills.com/manage_user.php"
     
-    let URL_RECOVER_PASSWORD:String = "http://Sarahs-MacBook-Pro-2.local/COHL/recover_password.php"
+    let URL_RECOVER_PASSWORD:String = "http://apps.healthyinthehills.com/recover_password.php"
     
     @IBOutlet weak var forgotPassword: UIButton!
     @IBOutlet weak var loginButton: UIButton!
@@ -90,7 +90,7 @@ class SignInWithoutFBViewController: UIViewController {
 
     
     //the button action function
-    func signUpUser(sender:UIButton) {
+    func signUpUser(sesignupusernder:UIButton) {
     
         let select_type = "sign_in_user"
         let requestURL = NSURL(string: URL_USER_LOGIN)

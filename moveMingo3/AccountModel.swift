@@ -24,8 +24,8 @@ class AccountModel: NSObject, URLSessionDataDelegate{
     
     //this will be changed to the path on WH&W's server
     //let urlPath: String =
-    let URL_USER_INFO:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_user.php"
-    let URL_GET_FRIENDS:String = "http://Sarahs-MacBook-Pro-2.local/COHL/manage_friends.php"
+    let URL_USER_INFO:String = "http://apps.healthyinthehills.com/manage_user.php"
+    let URL_GET_FRIENDS:String = "http://apps.healthyinthehills.com/manage_friends.php"
     
     func downloadItems(select_type: String, phone_list: String = "") {
         
