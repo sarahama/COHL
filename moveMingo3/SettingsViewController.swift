@@ -124,7 +124,7 @@ class SettingsViewController: UIViewController, AccountModelProtocal {
         // Dispose of any resources that can be recreated.
     }
     
-    func updateUserSettings(sender: UIButton){
+    @objc func updateUserSettings(sender: UIButton){
 
         //created NSURL
         let requestURL:NSURL = NSURL(string: self.URL_UPDATE_USER)!

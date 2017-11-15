@@ -52,7 +52,7 @@ class FeedbackViewController: UIViewController {
     
     
     // make a new record
-    func userFeedback(sender:UIButton){
+    @objc func userFeedback(sender:UIButton){
         
         // submit the feedback
 

@@ -113,7 +113,7 @@ class WelcomePageViewController: UIPageViewController {
                 do {
                     //converting resonse to NSDictionary
                     
-                    let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .  mutableContainers) as? NSDictionary
+                    let myJSON =  try JSONSerialization.jsonObject(with: data!, options: . mutableContainers) as? NSDictionary
                     
                     //parsing the json
                     if let parseJSON = myJSON {

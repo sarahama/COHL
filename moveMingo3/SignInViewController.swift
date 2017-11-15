@@ -137,7 +137,7 @@ class SignInViewController: UIViewController, FBSDKLoginButtonDelegate {
                 (data, response, error) in
                 
                 if error != nil{
-                    print("error is \(error)")
+                    print("error is \(String(describing: error))")
                     return;
                 }
                 print(data!)

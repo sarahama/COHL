@@ -57,7 +57,7 @@ class PassportViewController: UIViewController, AccountModelProtocal {
     
 
     // set the event select to attended
-    func changeEventSelect() {
+    @objc func changeEventSelect() {
         event_select_type = "attended"
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
@@ -126,7 +126,7 @@ class PassportViewController: UIViewController, AccountModelProtocal {
             do {
                 //converting resonse to NSDictionary
                 
-                let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .  mutableContainers) as? NSDictionary
+                let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                 
                 //parsing the json
                 if let parseJSON = myJSON {

@@ -9,10 +9,12 @@
 import UIKit
 
 class CarpoolsViewController: UIViewController {
-
+    let url_WHW = "http://www.healthyinthehills.com"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let requestURL = URL(string:url_WHW)
+        let request = URLRequest(url: requestURL! as URL)
+        webViewWHW.loadRequest(request)
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +23,7 @@ class CarpoolsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var webViewWHW: UIWebView!
 
     /*
     // MARK: - Navigation
