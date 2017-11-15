@@ -65,12 +65,12 @@ class SignInWithoutFBViewController: UIViewController {
         UIView.commitAnimations()
     }
     
-    func emailTextFieldDidBeginEditing (sender: UIGestureRecognizer) {
+    @objc func emailTextFieldDidBeginEditing (sender: UIGestureRecognizer) {
         print("move email")
         self.animateTextField(textField: emailText, up:true, distance: -150)
     }
     
-    func passTextFieldDidBeginEditing(sender: UIGestureRecognizer)
+    @objc func passTextFieldDidBeginEditing(sender: UIGestureRecognizer)
     {
         print("move password")
         self.animateTextField(textField: passText, up:true, distance: -180)
@@ -90,7 +90,7 @@ class SignInWithoutFBViewController: UIViewController {
 
     
     //the button action function
-    func signUpUser(sesignupusernder:UIButton) {
+    @objc func signUpUser(sesignupusernder:UIButton) {
     
         let select_type = "sign_in_user"
         let requestURL = NSURL(string: URL_USER_LOGIN)
@@ -151,7 +151,7 @@ class SignInWithoutFBViewController: UIViewController {
     }
     
     // function to open safari so the user can change their password
-    func openRecoverPasswordURL(sender:UIButton){
+    @objc func openRecoverPasswordURL(sender:UIButton){
         let svc = SFSafariViewController(url: NSURL(string: URL_RECOVER_PASSWORD)! as URL)
         self.present(svc, animated: true, completion: nil)
     }

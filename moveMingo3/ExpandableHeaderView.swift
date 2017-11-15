@@ -33,7 +33,7 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func selectHeaderAction(gestureRecognizer: UITapGestureRecognizer){
+    @objc func selectHeaderAction(gestureRecognizer: UITapGestureRecognizer){
         let cell = gestureRecognizer.view as! ExpandableHeaderView
         delegate?.toggleSection(header: self, section: cell.section)
     }
@@ -59,10 +59,10 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         let originalEndDate = event.end_date?.components(separatedBy: " ")
         
         let startDate = originalStartDate?[0]
-        let stconfigartTime = originalStartDate?[1]
+        _ = originalStartDate?[1]
         
         let endDate = originalEndDate?[0]
-        let endTime = originalEndDate?[1]
+        _ = originalEndDate?[1]
         
         // format the dates
         let dateFormatter = DateFormatter()

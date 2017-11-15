@@ -103,7 +103,7 @@ class ProfileViewController: UIViewController, FBSDKLoginButtonDelegate, Account
     }
     
     
-    func nonFBlogout(sender: UIButton) {
+    @objc func nonFBlogout(sender: UIButton) {
         // reset the current user id and using fb variables
         current_user_id = -1
         using_fb = true

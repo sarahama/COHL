@@ -177,7 +177,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
-    func changeView(sender:UIButton) {
+    @objc func changeView(sender:UIButton) {
         // toggle the view store boolean
         
         findFriends = !findFriends
@@ -208,7 +208,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     // connect with a friend
-    func requestFriend(sender:UIButton){
+    @objc func requestFriend(sender:UIButton){
         // Use code below from the RewardsViewController as a template
         
         // add the interested action to the cell
@@ -303,7 +303,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
 
     // accept a friend
-    func acceptFriend(sender:UIButton){
+    @objc func acceptFriend(sender:UIButton){
         // Use code below from the RewardsViewController as a template
         
         // add the interested action to the cell
@@ -397,7 +397,7 @@ class FriendsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // accept a friend
-    func denyFriend(sender:UIButton){
+    @objc func denyFriend(sender:UIButton){
         // Use code below from the RewardsViewController as a template
         
         // add the interested action to the cell

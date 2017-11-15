@@ -15,8 +15,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
 
     @IBOutlet weak var tableTitle: UILabel!
     @IBOutlet weak var fleckStrip: UIImageView!
-
-    
+//    var data : NSMutableData = NSMutableData()
     var feedItems: NSArray = NSArray()
     var selectedLocation : EventModel = EventModel()
     var selectedEvent: EventModel!
@@ -175,7 +174,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
     
     
     // make a new record
-    func userIsInterested(sender:UIButton){
+    @objc func userIsInterested(sender:UIButton){
         
         // add the interested action to the cell
         let alert = UIAlertController(title: "My Interests", message: "Would you like to add this to your interested events?", preferredStyle: .actionSheet)
@@ -223,7 +222,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
                 do {
                     //converting resonse to NSDictionary
                     
-                    let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .  mutableContainers) as? NSDictionary
+                    let myJSON =  try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary
                     
                     //parsing the json
                     if let parseJSON = myJSON {
@@ -260,7 +259,7 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     
-    func userIsCheckingIn(sender:UIButton){
+    @objc func userIsCheckingIn(sender:UIButton){
         let alertController = UIAlertController(title: "Check In!", message: "Enter the event code to earn your points", preferredStyle: .alert)
         
 
@@ -298,11 +297,14 @@ class ExpandableTableViewController: UIViewController, UITableViewDelegate, UITa
             
             //creating a task to send the post request
             let task = URLSession.shared.dataTask(with: request as URLRequest){
-                (data, response, error) in
+                data, response, error in
                 
                 if error != nil{
                     print("error is \(String(describing: error))")
                     return;
+                }
+                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
+                    print(httpStatus.statusCode)
                 }
                 print(data!)
                 print("parsing response...")

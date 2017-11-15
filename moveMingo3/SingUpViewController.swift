@@ -55,7 +55,7 @@ class SingUpViewController: UIViewController {
     */
     
     //the button action function
-    func signUpUser(sender: UIButton) {
+    @objc func signUpUser(sender: UIButton) {
         
         let select_type = "sign_up_user"
         let requestURL = NSURL(string: URL_CREATE_USER)

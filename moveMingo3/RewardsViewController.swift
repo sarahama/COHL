@@ -122,7 +122,7 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
-    func changeView(sender:UIButton) {
+    @objc func changeView(sender:UIButton) {
         // toggle the view store boolean
         
         viewStore = !viewStore
@@ -155,7 +155,7 @@ class RewardsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     // make a new record
-    func makePurchase(sender:UIButton){
+    @objc func makePurchase(sender:UIButton){
         
         // add the interested action to the cell
         let alert = UIAlertController(title: "My Purchase", message: "Would you like to redeem your points for this item?", preferredStyle: .actionSheet)
