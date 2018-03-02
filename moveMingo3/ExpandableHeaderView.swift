@@ -57,13 +57,13 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         self.delegate = delegate
         let originalStartDate = event.start_date?.components(separatedBy: " ")
         let originalEndDate = event.end_date?.components(separatedBy: " ")
-        
+        print(originalEndDate)
         let startDate = originalStartDate?[0]
-        _ = originalStartDate?[1]
-        
+//        _ = originalStartDate?[1]
+        let startTime = originalStartDate?[1]
         let endDate = originalEndDate?[0]
-        _ = originalEndDate?[1]
-        
+//        _ = originalEndDate?[1]
+        let endTime = originalEndDate?[1]
         // format the dates
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd" //Your New Date format as per requirement change it own
@@ -98,11 +98,11 @@ class ExpandableHeaderView: UITableViewHeaderFooterView {
         timeFormatter.dateFormat = "h:mm a"
 
         
-        let timeStartTime = dateFormatter.date(from: startDate!)
-        let timeEndTime = dateFormatter.date(from: endDate!)
+        let timeStartTime = timeFormatter.date(from: startDate!)
+        let timeEndTime = timeFormatter.date(from: endDate!)
         
-        self.eventTime = self.eventTime + timeFormatter.string(from: timeStartTime!)
-            + " - " + timeFormatter.string(from: timeEndTime!)
+        self.eventTime = self.eventTime + startTime!//timeFormatter.string(from: timeStartTime!)
+            + " - " + endTime!//timeFormatter.string(from: timeEndTime!)
         
     }
     

@@ -47,6 +47,7 @@ class EventModel: NSObject {
         self.expanded = false
         self.count = count
         
+        
     }
     
     

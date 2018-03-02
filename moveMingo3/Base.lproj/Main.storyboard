@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gXg-Ls-VUj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gXg-Ls-VUj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -362,10 +363,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brownStrip" translatesAutoresizingMaskIntoConstraints="NO" id="2OE-4q-lKC">
-                                <rect key="frame" x="0.0" y="100" width="375" height="68"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="68"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQW-vD-PxK">
-                                <rect key="frame" x="146" y="38" width="83" height="54"/>
+                                <rect key="frame" x="146" y="130" width="83" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="83" id="9ET-Nd-bHk"/>
                                 </constraints>
@@ -375,7 +376,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUD-V7-yQa">
-                                <rect key="frame" x="0.0" y="283" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="347" width="375" height="90"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackBullet" translatesAutoresizingMaskIntoConstraints="NO" id="ker-wk-kZC">
                                         <rect key="frame" x="8" y="38" width="15" height="14"/>
@@ -396,8 +397,8 @@
                                             <segue destination="8E9-yA-AFA" kind="show" id="dYU-iy-fSm"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by using Bluetooth and the event code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi0-Ws-t2A">
-                                        <rect key="frame" x="43" y="53" width="186" height="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="by using Bluetooth and the event code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi0-Ws-t2A">
+                                        <rect key="frame" x="43" y="53" width="186" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -430,7 +431,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsF-qf-3En">
-                                <rect key="frame" x="0.0" y="374" width="375" height="86"/>
+                                <rect key="frame" x="0.0" y="438" width="375" height="86"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackBullet" translatesAutoresizingMaskIntoConstraints="NO" id="nui-V4-jxy">
                                         <rect key="frame" x="8" y="36" width="15" height="14"/>
@@ -482,7 +483,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zDU-oX-Qv8">
-                                <rect key="frame" x="0.0" y="461" width="375" height="75"/>
+                                <rect key="frame" x="0.0" y="525" width="375" height="75"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blackBullet" translatesAutoresizingMaskIntoConstraints="NO" id="H98-Yo-89C">
                                         <rect key="frame" x="8" y="30" width="12" height="14"/>
@@ -535,10 +536,10 @@
                                     <constraint firstItem="oLQ-Xu-wtA" firstAttribute="top" secondItem="zDU-oX-Qv8" secondAttribute="top" constant="11" id="whe-fs-LTt"/>
                                 </constraints>
                             </view>
-                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Cf-HY-yZG">
-                                <rect key="frame" x="0.0" y="176" width="375" height="105"/>
+                            <view tag="2" contentMode="scaleAspectFit" semanticContentAttribute="spatial" translatesAutoresizingMaskIntoConstraints="NO" id="5Cf-HY-yZG">
+                                <rect key="frame" x="0.0" y="240" width="375" height="105"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VH5-iQ-SEz">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VH5-iQ-SEz">
                                         <rect key="frame" x="42" y="8" width="79" height="78"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="79" id="alm-dz-EPm"/>
@@ -580,8 +581,8 @@
                                     <constraint firstItem="h02-yJ-cWV" firstAttribute="top" secondItem="5Cf-HY-yZG" secondAttribute="top" constant="16" id="rE3-4Z-F6g"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-DV-0mZ">
-                                <rect key="frame" x="142" y="117" width="91" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PASSPORT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHH-DV-0mZ">
+                                <rect key="frame" x="142" y="204" width="91" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="6rH-2a-bxE"/>
                                 </constraints>
@@ -600,9 +601,9 @@
                             <constraint firstItem="2OE-4q-lKC" firstAttribute="leading" secondItem="5Cf-HY-yZG" secondAttribute="leading" id="8lA-O3-bZ1"/>
                             <constraint firstItem="5Cf-HY-yZG" firstAttribute="trailing" secondItem="vUD-V7-yQa" secondAttribute="trailing" id="Cto-ar-POd"/>
                             <constraint firstItem="2OE-4q-lKC" firstAttribute="leading" secondItem="ds1-RJ-WyQ" secondAttribute="leading" id="JNm-tR-Bfe"/>
-                            <constraint firstItem="HKc-5P-nmY" firstAttribute="top" secondItem="zDU-oX-Qv8" secondAttribute="bottom" constant="131" id="LBg-FS-XGW"/>
+                            <constraint firstItem="HKc-5P-nmY" firstAttribute="top" secondItem="zDU-oX-Qv8" secondAttribute="bottomMargin" constant="75" id="LBg-FS-XGW"/>
                             <constraint firstItem="2OE-4q-lKC" firstAttribute="centerX" secondItem="gHH-DV-0mZ" secondAttribute="centerX" id="UGQ-j9-Q3G"/>
-                            <constraint firstItem="VQW-vD-PxK" firstAttribute="top" secondItem="Ibu-JC-Snb" secondAttribute="bottom" constant="18" id="WJc-BC-vpj"/>
+                            <constraint firstItem="VQW-vD-PxK" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ibu-JC-Snb" secondAttribute="bottom" constant="20" id="WJc-BC-vpj"/>
                             <constraint firstItem="vUD-V7-yQa" firstAttribute="leading" secondItem="dsF-qf-3En" secondAttribute="leading" id="WOT-I6-Mnk"/>
                             <constraint firstItem="dsF-qf-3En" firstAttribute="trailing" secondItem="zDU-oX-Qv8" secondAttribute="trailing" id="Wzi-fm-cdb"/>
                             <constraint firstItem="5Cf-HY-yZG" firstAttribute="top" secondItem="gHH-DV-0mZ" secondAttribute="bottom" constant="37" id="c3D-55-B8d"/>
@@ -1345,7 +1346,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="Share your feedback ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Caa-6x-oyp" userLabel="messageText">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="Share your feedback... What did you like about the app? What did you dislike?  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Caa-6x-oyp" userLabel="messageText">
                                 <rect key="frame" x="16" y="276" width="343" height="270"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1681,8 +1682,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="DOr-xl-khT"/>
         <segue reference="we0-9K-ghr"/>
-        <segue reference="Vfj-Om-dRI"/>
-        <segue reference="f7Q-n4-CX2"/>
-        <segue reference="KIx-4V-ldK"/>
+        <segue reference="8mA-4C-fLu"/>
+        <segue reference="dYU-iy-fSm"/>
+        <segue reference="LVW-My-Rus"/>
     </inferredMetricsTieBreakers>
 </document>
